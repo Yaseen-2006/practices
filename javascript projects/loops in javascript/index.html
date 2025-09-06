@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript loops.</title>
+    <style>
+        ol>.list1 {
+            font-size: 30px;
+            font-weight: 600;
+        }
+
+        .container {
+            font-size: 1.25rem;
+            margin: 20px;
+        }
+
+        .sp1 {
+            font-weight: 600;
+            color: red;
+            /* text-transform: capitalize; */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>javascript loops.</h1>
+    <ol>
+        <li class="list1">FOR loop.</li>
+        <div class="container">
+            <p>
+                the for loop in javascript is used to print any continuouse number or to perform any task that require
+                the sequential operation till the certain condition.
+            </p>
+            <p>
+                the syntax of the for loop::
+                <br>
+                for(statement 1; statement 2; statement 3;){
+                <br>
+                &nbump;&nbump;&nbump;&nbump;&nbump;&nbump;// code to be executed
+                <br>
+                }
+            </p>
+            <p>
+                the given all the statements are executed ane after the other and as follows::
+                <br>
+                <br>
+                <b>statement 1: it is executed one time.</b>
+                <br>
+                <br>
+                <b>statement 2: it is the final condition till which the loop will run or it is the condition based on
+                    which the whole loop runs(the loop body is executed.).</b>
+                <br>
+                <br>
+                <b>statement 3: it executes every time the loop body executes.</b>
+                <br>
+                <br>
+            <p><u>quick diary :: </u><b>write a sample for loop of your choice.</b></p>
+            <span class="sp1"><u>NOTE::</u> THE CODE IS WRITTEN IN THE "script.js" FILE.</span>
+            </p>
+        </div>
+        <li class="list1">FOR IN loop</li>
+        <div class="container">
+            this loop deals with bojects this is used to print the key and/or elements of the objects.
+            <br>
+            the output is printed as much times as much the keys of the abjects are.
+            <br>
+            <b>EXAMPLE::</b>
+            <br>
+            if the object is::
+            <br>
+            <pre><b>
+                let obj = {
+                    name: "yaseen",
+                    role: "CEO",
+                    AT: "Y-services industries LTD"
+                }
+            </pre></b>
+            <br>
+            then the output will be ::
+            <br>
+            <pre>
+                <b>
+{ name: 'yaseen', role: 'CEO', AT: 'Y-services industries LTD' }
+{ name: 'yaseen', role: 'CEO', AT: 'Y-services industries LTD' }
+{ name: 'yaseen', role: 'CEO', AT: 'Y-services industries LTD' }
+                </b>
+            </pre>
+            this is because the keys are 4.
+            <br>
+            <b>the syntax of the for-in loop is:: </b>
+            <pre>
+                <b>
+for(key in obj){
+    // element = obj[key];
+    console.log(obj);
+}
+                </b>
+            </pre>
+            <P>THIS IS USED TO PRINT THE KEY , ELEMENT OF THE OBJECT AND THE OJECT ITSELF.</P>
+        </div>
+        <li class="list1">FOR OF loop</li>
+        <div class="container">
+            this loop deals with the arrays and the strings this loop is used to print the elements of an array separately and the charecters of the string separately.
+            <P><b>SYNTAX::</b>
+                <br>
+                for (variable (variable for every iteration) <b>of</b> iterable (iterable data structures like arrays and strings.)){ <br>
+                    // code to be executed.
+                    <br>
+                }
+            </P>
+            <br>
+            <b><u>EXAMPLE::</u></b>
+            <pre><b> let string = "yaseen";
+                for (element of arr) {
+                    console.log(element);
+                }</b></pre>
+                <b>OUTPUT::</b>
+            <pre><b>
+                y
+                a
+                s
+                e
+                e
+                n</b></pre>
+        </div>
+        <li class="list1">WHILE loop.</li>
+        <div class="container">
+            <b>SYNTAX::</b>
+            <br>
+            <br>
+            <b><pre>(initialization)
+    while (condition){
+            code to be executed.
+                } </pre></b>
+                <p>
+                    this loop is used to execute a certain task at a certain condition wich will be given in the brackets after the "while".
+                </p>
+                <b><pre>let i = 2;                            // initialization
+    while (i&gt;=10){                    // condition which is to be satisfied.
+                console.log(i);       // prints "i"
+                i++;                  //this line increses the value of i eg. 3,4,5,6,....
+                } </pre></b>
+                <p>the above code demonstrates that the how while loop works.</p>
+                <p>step 1 :: the value of i is initialized as i = 2
+                    <br>
+                    step 2 :: the while loop is started whith the condition till where the code will be executed. i.e whenever the value of i will be 10 the code will run.
+                    <br>
+                    step 3 :: the output "i" is printed.
+                </p>
+                <p>now according to the given condition the value of the i will be printed when till it's value becomes greater than or equal to 10. 
+                    <br>
+                    <br>
+                    <span class="sp1">NOTE:: The program will be infinite and will never end if the condition of the while loop never meets.</span>
+                </p>
+        </div>
+        <li class="list1">DO WHILE loop.</li>
+        <div class="container">
+            <B>SYNTAX::</B>
+            <br>
+            <p>
+                initialization.
+                <br>
+                do{ <br>
+                    code to be executed.
+                <br>
+
+                 } while (condition);
+            </p>
+
+            <br>
+            this loop is similar to the <b> "WHILE" </b>loop but the difference here is the <b>code to be executed will be executed atleast one time then after that the condition will be checked</b> and if the condition gets satisfied the loop will further be executed.
+            <p>
+                <B>FOR EXAMPLE::</B>
+                <br>
+                <pre><b>let a = 1;
+do {
+    console.log(a);
+    a++;
+} while (a&lt;20);</b></pre>
+<br>
+<span class="sp1">jab tak "a" ki value 20 se kam rahegi tab tak program chalega "a " ki value 20 ke equal hote hi program terminate ho jayega. <br>
+    ham <u>for</u> loop me final condition dete hai ki us condition ke meet hone tak program chalega but yaha par jab tak condition meet nahi hogi program nahi chalega. 
+    <br>
+    agar iss program me less-than ki jagah greater-than hota to condition meet hi nahi hoti kyu ki "a" 20 se greater nahi hai iss wajah se program chalta hi nahi or output hi nahi aata.
+    <br>
+    but abhi less-than hai or jab tak "a" less-than 20 rahega tab tak "a" ki value print hoti rahegi.
+</span>
+            </p>
+        </div>
+    </ol>
+    <!-- <script src="javascript.js"></script> -->
+</body>
+
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript variables</title>
+    <style>
+        ol li {
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        .content {
+            padding: 30px;
+            font-size: 1.3rem;
+        }
+
+        .list {
+            font-size: 1.3rem;
+            font-weight: 600;
+            padding: 10px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>javascript variables.</h1>
+    <ol>
+        <li>variables (var)</li>
+        <div class="content">
+            <p>variables in javascript are just like the variables in c & c++ these variables can store the values such
+                as numbers, charecters, floats, doubles and many more..</p>
+
+            <p> variabls in javascript are declared in single line as well as in multiple lines.
+                <br>
+                to declare the variables in the single line we use the coma ',' separeted values:
+                <br>
+                EXAMPLE:: var a, b;
+                <br>
+                we can declare the variables of javascript in multiple lines also.
+                <br>
+                EXAMPLE:: var a;
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var
+                b;
+            </p>
+            <p>also we can assign the value of the varible in the declaration or outside the declaration also.
+                EXAMPLE:: var a = 34, b = 90;
+                <br>
+                EXAMPLE:: var a , b;
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a
+                = 34;
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b
+                = 45;
+                <br>
+                <b><u>note: the semi colon ";" after all the lines is mendarory.</u></b>
+            </p>
+        </div>
+        <li>\n & \t</li>
+        <div class="content">
+            these are <b>elements which are used to make the line break and the tab </b> in the console just like we use
+            these in the c & c++ programs.
+        </div>
+        <li>variables as the output.</li>
+        <div class="content">
+            <p> <b><u>SYNTAX::</b>&nbsp;&nbsp;&nbsp; console.log("the values assinged are :: ", a,"\t , \t", b);</u>
+                <br>
+                <b><u>OUTPUT::</u></b>
+            <pre>the values assinged are ::  34   ,       45</pre>
+            </p>
+            <p>
+                <b><u>SYNTAX::</b>&nbsp;&nbsp;&nbsp; console.log("addition is::", a ,"+", b, "=" , a + b);</u>
+                <br>
+                <b><u>OUTPUT::</u></b>
+            <pre>addition is:: 34 + 45 = 79</pre>
+            </p>
+            <b><u>NOTE::</u></b> we can see these all things as the output in the console.
+        </div>
+        <li>datatype- numbers, string</li>
+        <div class="content">
+            the datatypes are the type of the data assigned to the variables.
+            <ul>
+                <li class="list">var a = 34 :: writing any number without any inverted coma will make sure that the
+                    datatype assigned is a number.</li>
+                <li class="list">var b = "yaseen" :: writing anything within the double inversted coma will make sure to
+                    the console that the datatype assigned is a string.</li>
+                <li class="list">typeof :: we can check the type of the data assigned by writing <u>typeof</u> in the
+                    brackets..</li>
+                EXAMPLE:: console.log(typeof a, typeof b);
+                <br>
+                OUTPUT :: number string
+            </ul>
+
+        </div>
+        <li>rules to assign the variables</li>
+        <div class="content">
+            <ol>
+                <li class="list">letters, digits, underscores & $ sign are allowed.</li>
+                <li class="list">must start with a $ , _ or a letter and should not start with a number. such as "a1" is
+                    valid but "1a" is not.</li>
+                <li class="list">javascript reserved words cannot be used as variables.</li>
+                <li class="list">YAseen and yaseen are different variables <u>(case sensitive).</u></li>
+            </ol>
+        </div>
+        <li>let and const in javascript</li>
+        <div class="content">
+            <ul>
+                <li class="list">let. </li>
+                this is the variable in javascript which is not globally assinged but assinged in the blocks if the let
+                variable is assinged in the start of the program then we can change its value in the block and outside
+                the block the value of that variable be it's previouse value.
+                <br>
+                EXAMPLE::
+                <b><pre>let a , b;
+a = 34;
+b = 23;
+console.log(a , b);
+{
+    let a = 5 , b = 6;
+    console.log(a , b);
+}
+console.log(a , b);</pre></b>
+                OUTPUT:: 34 23
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                5 6
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;34
+                23
+                <li class="list">const.</li>
+                <div class="container">
+                    this is the variable in the javascript which is used to assign the constant variables this means the
+                    variable assinged using this will be constant universally and it cannot be altered.
+                </div>
+            </ul>
+
+        </div>
+        <li>primitive datatypes.</li>
+        <div class="content">
+            primitive dtatatypes are a set of basic datatypes in javascript there are the 7 primitive datatypes in
+            javascript.
+            <ol>
+                <li class="list">null</li>
+                <div class="content">
+                    this datatype means that there is not any data in that.
+                </div>
+                <li class="list">number</li>
+                <div class="content">
+                    any number is declared in this variable
+                    <br>
+                    EXAMPLE:: <b>let a = 34;</b>
+                </div>
+                <li class="list">string</li>
+                <div class="content">
+                    any thing written in the double cotation (" ") is this datatype. string is the collection of
+                    multiple charecters.
+                    <br>
+                    EXAMPLE:: <b>let a = "true";</b>
+                </div>
+                <li class="list">symbol</li>
+                <div class="content">
+                    will learn this in upcoming videos.
+                </div>
+                <li class="list">undefined</li>
+                this datatype means that the variable is empty and there is not any data defined in that variable.
+                <li class="list">boolean</li>
+                this datatype means that there the two conditions of the declared data. true and false.
+                <li class="list">BigInt</li>
+                <div class="content">
+                    this datatype means that the variable is storing the big integer values.
+                </div>
+            </ol>
+        </div>
+        <li>Objects.</li>
+        <div class="content">
+            objects in the javascripts are very essential for the javascript's object oriented programming.
+            <br>
+            Objects in the javscript are created as folows::
+            <br>
+            <b>example code::</b>
+            <br>
+            <b>
+                <pre>
+let o = {
+    "name" : "Yaseen",
+    "industry performance": "good",
+    "income" : "500 crore"
+}
+console.log(o);
+            </pre>
+            </b>
+            in the object many things can be added by using the given syntax.
+            <br>
+            <b>example::</b>
+            <br>
+            <b>
+                <pre>
+o.good = "good";
+o.age = "18";
+console.log(o);    
+            </pre>
+            </b>
+            <br>
+            <b>final output::</b>
+            <br>
+            <b>
+                <pre>
+{
+     name: 'Yaseen',
+    'industry performance': 'good',
+    income: '500 crore',
+    good: 'good',
+     age: '18'
+    }
+            </pre>
+            </b>
+        </div>
+    </ol>
+    <script src="script.js"></script>
+</body>
+
+</html>

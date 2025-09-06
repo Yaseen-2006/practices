@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS sizing units</title>
+    <style>
+        html {
+            font-size: 24px;
+        }
+    
+        ol {
+            font-size: x-large;
+        }
+    
+        .p1 {
+            font-size: x-large;
+            border: 2px solid;
+            width: 80vw;
+            background-color: aquamarine;
+        }
+    
+        ol b {
+            text-decoration: underline;
+        }
+    
+        #p1 {
+            height: 30vh;
+        }
+    
+        .p2 {
+            font-size: 1.5em;
+        }
+    
+        .p3 {
+            font-size: 1.5rem;
+        }
+    
+        .p4 {
+            min-height: 80vh;
+        }
+    
+        .p5 {
+            min-width: 80vw;
+            min-height: 80vh;
+    
+    
+        }
+    
+        .div {
+            font-size: x-large;
+            border: 2px solid;
+            min-width: 80vw;
+            min-height: 80vh;
+            background-color: aquamarine
+        }
+    
+        .div>div {
+            margin: 0;
+            border: 2px solid blue;
+            width: 50%;
+        }
+    
+        .div>div>p {
+            margin: 0;
+            border: 2px solid red;
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>CSS sizing units</h1>
+        <ol>
+            <li>px (pixels) <p class="p1">aquires the Given pixels of the monitor</p>
+            </li>
+            <li>viewport width (vw) <p class="p1">it takes the Given <b>percentage</b> of the viewport width <br>i.e
+                    <b>example: width:100vw says:-</b>this element will take the 100% viewport width of the device in
+                    which the website is getting previewed
+                </p>
+            </li>
+            <li>margin: auto; <p>the margin from the left and right will be automatically adjusted so that the div will
+                    be alingedd in the center <b>if any value in pixels is written before the auto in the margin the px
+                        value will be of height. for more refer the video @ 6:20.</b></p>
+            </li>
+            <li>viewport height (vh) <p class="p1">it takes the Given <b>percentage</b> of the viewport height
+                    i.e <b>example: height:100vh says:-</b> this element will take the 100% viewport height of the
+                    device in which the website is getting previewed</p>
+            </li>
+            example for (vh):
+            <p class="p1" id="p1"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem, harum!
+                Obcaecati, quidem. Laboriosam aut facilis error sunt recusandae architecto accusantium quo ducimus quas
+                alias nam inventore voluptatum debitis, harum provident? Velit eligendi aliquid natus ad laboriosam.
+                <b>this takes the 10% of the hieght of the monitor.</b>
+            </p>
+            <li>Equal to the current font size (em) <p class="p1 p2">the em is the multiple of the font size of trhe
+                    current font size <br> for example: <b>1em is font size is 1 times the current font size <br> and
+                        2em is the 2 times the current font size </b>(16 pixels is the default font size) <br><span
+                        style="text-decoration: underline;"> applied font size is 1.5 em that will be 16*1.5=24 px
+                        (shown into the computed value)</span></p>
+            </li>
+            <li>root em (rem) <p class="p1 p3"> Relative to the font size of the root element. <br><b>1em is font size
+                        is 1 times the current font size
+                        and 2em is the 2 times the current font size</b> (16 pixels is the default font size for the rem
+                    ) <br> <span style="text-decoration: underline;">applied font size is 1.5 rem that will be 16*1.5=24
+                        px (shown into the computed value) </span><br> note: in this HTML page the font size is changed
+                    to x-large i.e 24px.</p>
+            </li>
+            <li>v min <p class="p1">in the computer vmin is equivalent to vh and in the phone vmin is equivalent to vw .
+                    <br> this is because it computes vmin = minimum viewport therefore in computer the minimum viewport
+                    is height and in phone the minumum viewport is the width. <br> <span
+                        style="text-decoration: underline;"> e.g: if it is written that width = 100vmin then in computer
+                        it will compute as 100 vh and in the phone it will compute as vw</span></p>
+            </li>
+            <li>v max <p class="p1">in computer v max is equivalent to vw because maximum viewport is width and in the
+                    phone the v max is equivalent to vh because in phone maximum viewport is the height <span
+                        style="text-decoration: underline;"><br>e.g: if it is written that width = 100vmax then in the
+                        computer the v max is equivalent to vw beacause the maximum viewport is the width and in the
+                        phone vmax is equivalent to vh because the maximum viewport is the height.</span></p>
+            </li>
+            <li>min-height & width<p class="p1 p4">specifies that the given height should be the minimum height of the
+                    container example: this requires the space no matter the text is fulfilled or not. <b>and maximum
+                        has no limit. it will keep increasing as the content adds. <br><br>same for the width.</b></p>
+            </li>
+            <li>percentage units. <p>this specifies that the content in it will take the only 50% of the width of the
+                    container or its parent div. <br> for example:</p>
+                <div class="div">
+                    <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas totam maxime labore sapiente
+                        possimus quae reprehenderit similique, magnam ipsa aliquid tempore illo, sit fuga. Repellat
+                        libero numquam debitis veniam labore quibusdam maiores, adipisci tenetur, ea expedita voluptate
+                        iusto asperiores, harum quos ut facilis sit? Cupiditate. <p>Lorem ipsum dolor sit amet
+                            consectetur, adipisicing elit. Voluptatum quasi illum nesciunt.</p>
+                    </div>
+                </div>
+            </li>
+            <li>comprehencive list for all units: <p><a
+                        href=" https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Values_and_Units">access this page
+                        for list.</a></p>
+            </li>
+
+        </ol>
+    </div>
+    <div>
+        <figure>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/nkaAJYfRDVk?si=yJJVT30NPcWdOKrd"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </figure>
+    </div>
+</body>
+
+</html>

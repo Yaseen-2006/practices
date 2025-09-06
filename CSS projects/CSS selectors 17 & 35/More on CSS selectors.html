@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on CSS Selectors</title>
+    <style>
+        /* targets the first child of the box. */
+        /* .box:first-child{
+            background-color: red;
+        } */
+ 
+        /* targets the first line of any selected element  */
+        /* .box::first-line{
+            color: yellow;
+        } */
+
+        /* selects every element in the given div i.e universal selectors of the given div  */
+        /* .boxes *{
+            color: blue;
+            border: 2px solid black;
+        } */
+        
+        /* attribute selector  in the square bracket selects the attribute given to any element.  */
+        /* p, a, .box, [data-color="primary"]{
+            padding-top: 45px;
+        }  */
+
+        /* selector:nth-child(even and odd) */
+        /* this selects the nth child and makes changes to it in any element  */
+        /* it can select the  even and odd numbered child also  */
+        /* .box:nth-child(odd){
+            background-color: blue;
+        } */
+
+        /* selects the second-last child from the div  */
+        /* .box:nth-last-child(2){
+            background-color: red;
+        } */
+
+        /* adds this content before the start of the main content of the div.  */
+        .boxes::before {
+            content: "Harry is good";
+            color: blue;
+        }
+
+        /* adds this content after the end of the main content of the div  */
+        .boxes::after {
+            content: "Sigma course is also good";
+            color: red;
+        }
+
+        /* these changes apply when the user selects the text inserted in that div.  */
+        ::selection {
+            background-color: black;
+            color: aqua;
+        }
+
+        /* specific selector */
+         /* this is the specific selector which selects the given attribute after the :: (double colon) */
+        /* changes the first letter of the div whose class is addressed here  */
+        .box::first-letter {
+            color: peru;
+            font-size: 45px;
+        }
+
+        /* specific attrribute selector */
+        /* this is the specific selector which selects the given attribute after the :: (double colon) */
+        input::placeholder {
+            color: rgb(106, 106, 114);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="boxes">
+        <div data-color="primary" class="box">I am first box</div>
+        <div class="box">Hey I am a box</div>
+        <div class="box">Hey I am a box</div>
+        <input type="text" placeholder="Type your name here">
+    </div>
+</body>
+
+</html>

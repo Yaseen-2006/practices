@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS float and clear</title>
+    <style>
+        :root {
+            --child-border-color: red;
+        }
+
+        .img1 {
+            float: left;
+        }
+        .img2{
+            float: right;
+        }
+        .img3{
+            float: right;
+            display: flow-root;
+        }
+
+        .main {
+            font-size: 30px;
+        }
+
+        .div1 {
+            font-size: 0.7em;
+            padding: 20px;
+        }
+
+        .cards {
+            border: 2px solid black;
+        }
+
+        .cards>.card1 {
+            border: 2px solid var(--child-border-color);
+        }
+
+        .cards>.card2 {
+            border: 2px solid var(--child-border-color);
+        }
+
+        .cards>.card3 {
+            border: 2px solid var(--child-border-color);
+        }
+
+        .cards>.card4 {
+            border: 2px solid var(--child-border-color);
+        }
+
+        .cards>.card4 {
+            border: 2px solid var(--child-border-color);
+        }
+        .cards1{
+            border: 2px solid black;
+            display: flow-root;
+        }
+        .cards1>.card1 {
+            border: 2px solid var(--child-border-color);
+        }
+
+        .cards1>.card2 {
+            border: 2px solid var(--child-border-color);
+        }
+
+        .cards1>.card3 {
+            border: 2px solid var(--child-border-color);
+        }
+
+        .cards1>.card4 {
+            border: 2px solid var(--child-border-color);
+        }
+
+        .cards1>.card4 {
+            border: 2px solid var(--child-border-color);
+        }
+        .cards3{
+            border: 2px solid black;
+            display: flow-root;
+        }
+        .cards3>.card1 {
+            border: 2px solid var(--child-border-color);
+        }
+
+        .cards3>.card2 {
+            border: 2px solid var(--child-border-color);
+        }
+
+        .cards3>.card3 {
+            border: 2px solid var(--child-border-color);
+        }
+
+        .cards3>.card4 {
+            border: 2px solid var(--child-border-color);
+        }
+
+        .cards3>.card4 {
+            border: 2px solid var(--child-border-color);
+        }
+        .cards3 > :nth-child(2){
+            clear:right;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <h1>CSS float and clear.</h1>
+    </header>
+
+    <div class="main">
+        <main>
+            <ol>
+                <li>float.
+                    <div class="div1">
+                        the float is used in the styles of the image tags to allow the content to be follwed by the
+                        given direction.
+                        <p>for example: <b>here is the container named cards containing the 4 more divs named the
+                                respective numbers of the cards.</b></p>
+                        <figure>
+                            <div class="cards">
+                                <img class="img1" src="https://images.pexels.com/photos/3880179/pexels-photo-3880179.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                    alt="" width="440">
+                                <div class="card1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+                                    officiis sed quae, suscipit necessitatibus ab at, minima, reprehenderit facilis
+                                    mollitia eaque eius. Soluta, recusandae eligendi. Rerum recusandae delectus optio
+                                    fugit sint eum vel quae?</div>
+                                <div class="card2">card2</div>
+                                <div class="card3">card3</div>
+                                <div class="card4">card4</div>
+                            </div>
+                        </figure>
+                        syntax:
+                        <p><b>
+                                <pre>img{
+        float: left;
+                        }</pre>
+                            </b></p>
+                        <p><b>
+                            <figure>
+                                <div class="cards">
+                                    <img class="img2" src="https://images.pexels.com/photos/3880179/pexels-photo-3880179.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                        alt="" width="440">
+                                    <div class="card1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+                                        officiis sed quae, suscipit necessitatibus ab at, minima, reprehenderit facilis
+                                        mollitia eaque eius. Soluta, recusandae eligendi. Rerum recusandae delectus optio
+                                        fugit sint eum vel quae?</div>
+                                    <div class="card2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta tempore sequi voluptates? Maxime, consequatur consectetur. At voluptatem voluptates repellendus qui delectus sint repellat facilis libero ab quasi? Deserunt, error aspernatur! Ullam quis mollitia harum, quod accusantium cupiditate voluptatem quo corrupti illum itaque animi ipsum. Iste, fugiat et? Vitae voluptatibus adipisci commodi delectus omnis dicta asperiores nemo fugit, dignissimos itaque explicabo quaerat nulla officia? Dolore recusandae minima reprehenderit! Ipsum eveniet voluptas vero doloremque, cupiditate fugiat, modi natus, explicabo sint quae magni! Deleniti ipsum provident harum dignissimos, fuga pariatur. Officiis adipisci libero itaque dolorem debitis enim, atque, dignissimos mollitia repudiandae saepe assumenda nam sapiente nulla. Deleniti sint minima, possimus error assumenda ducimus consequuntur enim est recusandae nemo, praesentium a velit odio temporibus? Similique maxime quibusdam nulla vero magni suscipit unde porro sequi minus eos necessitatibus minima quod veniam, dignissimos eaque eveniet, earum perferendis? Quod non aliquam adipisci iste voluptas possimus expedita excepturi quo enim aperiam repellat obcaecati at pariatur cumque cupiditate, voluptatibus esse officiis maiores architecto fugit. Voluptatum nemo a sapiente vitae odit sequi, voluptatem deleniti possimus illo exercitationem quidem aliquam dicta omnis itaque, molestias maxime tempore cum veritatis. Quasi quas blanditiis minus corrupti laboriosam illo saepe facilis, repellat libero eveniet eum quae quidem? Incidunt libero corporis facilis debitis unde perferendis earum sunt! Velit animi corporis sapiente voluptatum praesentium ex, recusandae dolore quam tempore, inventore dolorem eius esse distinctio, quae placeat hic.</div>
+                                    <div class="card3">card3</div>
+                                    <div class="card4">card4</div>
+                                </div>
+                            </figure>
+                                <pre>img{
+        float: right;
+                        }</pre>
+                            </b></p>
+                            but here the picture overflows from the parent border if the content inside the border is not much. as the solution we use <b><u>display: flow-root; in the parent div.</u></b> in the parent div's style.
+                            <figure>
+                                <figure>
+                                    <div class="cards1">
+                                        <img class="img3" src="https://images.pexels.com/photos/3880179/pexels-photo-3880179.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                            alt="" width="440">
+                                        <div class="card1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+                                            officiis sed quae, suscipit necessitatibus ab at, minima, reprehenderit facilis
+                                            mollitia eaque eius. Soluta, recusandae eligendi. Rerum recusandae delectus optio
+                                            fugit sint eum vel quae?</div>
+                                        <div class="card2">card2</div>
+                                        <div class="card3">card3</div>
+                                        <div class="card4">card4</div>
+                                    </div>
+                                </figure>
+                            </figure>
+                            syntax:
+                            <b><pre>img{
+        display: flow-root 
+                                }</pre></b>
+                    </div>
+                </li>
+                <li>
+                    clear.
+                    <div class="div1">
+                        in the clear the the direction like float is also given here but to the element. that element can be a div or a paragraph. <br>
+                        the to which the clear is applied it says : <br>
+                        <b>"i don't want any of the things on my right side"</b> <br> 
+                        example:
+                        <figure>
+                            <div class="cards">
+                                <img class="img2" src="https://images.pexels.com/photos/3880179/pexels-photo-3880179.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                    alt="" width="440">
+                                <div class="card1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+                                    officiis sed quae, suscipit necessitatibus ab at, minima, reprehenderit facilis
+                                    mollitia eaque eius. Soluta, recusandae eligendi. Rerum recusandae delectus optio
+                                    fugit sint eum vel quae?</div>
+                                <div class="card2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta tempore sequi voluptates? Maxime, consequatur consectetur. At voluptatem voluptates repellendus qui delectus sint repellat facilis libero ab quasi? Deserunt, error aspernatur! Ullam quis mollitia harum, quod accusantium cupiditate voluptatem quo corrupti illum itaque animi ipsum. Iste, fugiat et? Vitae voluptatibus adipisci commodi delectus omnis dicta asperiores nemo fugit, dignissimos itaque explicabo quaerat nulla officia? Dolore recusandae minima reprehenderit! Ipsum eveniet voluptas vero doloremque, cupiditate fugiat, modi natus, explicabo sint quae magni! Deleniti ipsum provident harum dignissimos, fuga pariatur. Officiis adipisci libero itaque dolorem debitis enim, atque, dignissimos mollitia repudiandae saepe assumenda nam sapiente nulla. Deleniti sint minima, possimus error assumenda ducimus consequuntur enim est recusandae nemo, praesentium a velit odio temporibus? Similique maxime quibusdam nulla vero magni suscipit unde porro sequi minus eos necessitatibus minima quod veniam, dignissimos eaque eveniet, earum perferendis? Quod non aliquam adipisci iste voluptas possimus expedita excepturi quo enim aperiam repellat obcaecati at pariatur cumque cupiditate, voluptatibus esse officiis maiores architecto fugit. Voluptatum nemo a sapiente vitae odit sequi, voluptatem deleniti possimus illo exercitationem quidem aliquam dicta omnis itaque, molestias maxime tempore cum veritatis. Quasi quas blanditiis minus corrupti laboriosam illo saepe facilis, repellat libero eveniet eum quae quidem? Incidunt libero corporis facilis debitis unde perferendis earum sunt! Velit animi corporis sapiente voluptatum praesentium ex, recusandae dolore quam tempore, inventore dolorem eius esse distinctio, quae placeat hic.</div>
+                                <div class="card3">card3</div>
+                                <div class="card4">card4</div>
+                            </div>
+                        </figure>
+                            <pre>img{
+    float: right;
+                    }</pre>
+                        </b></p>
+                        but here the picture overflows from the parent border if the content inside the border is not much. as the solution we use <b><u>display: flow-root; in the parent div.</u></b> in the parent div's style.
+                        <figure>
+                            <figure class="exfig">
+                                <div class="cards3">
+                                    <img class="img3" src="https://images.pexels.com/photos/3880179/pexels-photo-3880179.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                        alt="" width="440">
+                                    <div class="card1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+                                        officiis sed quae, suscipit necessitatibus ab at, minima, reprehenderit facilis
+                                        mollitia eaque eius. Soluta, recusandae eligendi. Rerum recusandae delectus optio
+                                        fugit sint eum vel quae?</div>
+                                    <div class="card2">card2</div>
+                                    <div class="card3">card3</div>
+                                    <div class="card4">card4</div>
+                                </div>
+                            </figure>
+                            <p>the code of the goven figure:</p>
+                            <b><pre> .cards3 > :nth-child(2){
+                                clear: right;
+                            }</pre></b>
+                    </div>
+                   <b> it has several values such as clear: right, left, both.</b> 
+                   <br>
+                </li>
+            </ol>
+        </main>
+    </div>
+    <hr>
+    <figure>
+
+        <div>
+            <iframe class="YouTube" width="560" height="315" src="https://www.youtube.com/embed/6_UoTF7njLM?si=piuQDXx7pHpYiGze" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </figure>
+</body>
+
+</html>

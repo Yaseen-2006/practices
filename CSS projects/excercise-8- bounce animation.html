@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercise-8 bounce animation</title>
+    <style>
+        .container{
+            width: 80vw;
+            height: 80vh;
+            background-color: blue;
+            display: flex;
+            align-items: flex-end;
+        }
+        .ball{
+            width: 80px;
+            height: 80px;
+            background-color: red;
+            border-radius: 70px;
+            position: relative;
+            animation: bouncey 1s ease-out 0s infinite alternate-reverse forwards, bouncex 6s  0s linear infinite;
+            /* animation: animateY 1s ease-out infinite alternate,  animateX 3s linear infinite alternate; */
+        }
+        @keyframes bouncey{
+            from{
+                
+            }
+            to{
+                transform: translateY(-250%);
+            }
+        }
+        @keyframes bouncex{
+            from{
+                
+            }
+            to{
+                transform: translateX(71vw);
+            }
+        }
+         /* @keyframes animateX{
+            from{
+                left: 0%;
+            }
+            to{
+                left: 95%;
+            }
+         }
+         @keyframes animateY{
+            from{
+                bottom: 0%;
+            }
+            to{
+                bottom: 50%;
+            }
+         } */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="ball animation"></div>
+    </div>
+</body>
+</html>

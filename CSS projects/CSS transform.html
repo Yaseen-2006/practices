@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS transform</title>
+    <style>
+        ol{
+            font-size: 25px;
+        }
+        .div{
+            font-size: 0.75em;
+            margin: 15px;
+        }
+        .container1{
+            border: 2px solid red;
+            height: 30vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .box1{
+            border: 2px solid black;
+            width: 50px;
+            height: 50px;
+            background-color: beige;
+            transform: rotate(40deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }        
+        .box2{
+            border: 2px solid black;
+            width: 50px;
+            height: 50px;
+            background-color: beige;
+            transform: rotate(0.5turn);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }        
+        .box3{
+            border: 2px solid black;
+            width: 50px;
+            height: 50px;
+            background-color: beige;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: rotatex(40deg);
+        }        
+        .box4{
+            border: 2px solid black;
+            width: 50px;
+            height: 50px;
+            background-color: beige;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: rotatey(40deg);
+        }        
+        .box5{
+            border: 2px solid black;
+            width: 50px;
+            height: 50px;
+            background-color: beige;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: rotatez(40deg);
+        }        
+        .box6{
+            border: 2px solid black;
+            width: 50px;
+            height: 50px;
+            background-color: beige;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: scale(1.6);
+        }        
+        .box7{
+            border: 2px solid black;
+            width: 50px;
+            height: 50px;
+            background-color: beige;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: scalex(1.6);
+        }        
+        .box8{
+            border: 2px solid black;
+            width: 50px;
+            height: 50px;
+            background-color: beige;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: scaley(1.6);
+        }        
+        .box9{
+            border: 2px solid black;
+            width: 50px;
+            height: 50px;
+            background-color: beige;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: scalez(1.6);
+        }        
+        .box10{
+            border: 2px solid black;
+            width: 50px;
+            height: 50px;
+            background-color: beige;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: skew(15deg);
+        } 
+        .big{
+            font-size: 25px;
+            text-decoration: underline;
+            font-weight: 900;
+            display: inline-block;
+            transform: translatey(50%);
+        }  
+        .box11{
+            border: 2px solid black;
+            width: 50px;
+            height: 50px;
+            background-color: beige;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: translate(100%);
+        }     
+        .box12{
+            border: 2px solid black;
+            width: 50px;
+            height: 50px;
+            background-color: beige;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: rotate(45deg);
+            transform-origin: 0% 0%;
+        }     
+    </style>
+</head>
+<body>
+    <h1>CSS transform property. </h1>
+    <ol>
+        <li>transform: rotate( given deg (degree));</li>
+        <div class="div">
+            in this property we can rotate the given item by the given degree clockwise.
+            i.e <br> example:: 
+            <ul>
+            <li><b>transform: rotate( 40deg);</b></li>
+            </ul>
+            <br>this means that the item will be rotated by 40 degrees.
+            <br>
+            <b>example.</b>
+            <br>
+            <div class="container1">
+                <div class="box1">box</div>
+            </div>
+            <br>
+
+            <ul><li>
+                <b>transform: rotate( 0.25turn);</b>
+            </li></ul>
+            <br>
+            this means that the item will turn 180 gerees because.
+            <pre>
+            1 turn = 360 deg
+therefore,  1/2 = 0.5 turn = 180 deg
+            1/4 = 0.25 turn = 90 deg.
+            </pre>
+            this is why the item will turn 90 degrees.
+            <br><b>example::</b>
+            <br>
+            <div class="container1">
+                <div class="box2">box</div>
+            </div>
+            <br>
+            <ul><li><b>transform: rotatex( 40deg) rotatey( 40deg) rotatez( 40deg);</b></li></ul>
+            <br>
+            using this syntax we can rotate the item with respect to the x, y and z axes.
+            <br>
+            <br>
+            <b>example:: rotated 40 degree on x axis.</b>
+            <br>
+            <div class="container1">
+                <div class="box3">box</div>
+            </div>
+            <br>
+            <b>example:: rotated 40 degree on y axis.</b>
+            <br>
+            <div class="container1">
+                <div class="box4">box</div>
+            </div>
+            <br>
+            <b>example:: rotated 40 degree on z axis.</b>
+            <br>
+            <div class="container1">
+                <div class="box5">box</div>
+            </div>            
+        </div>
+        <li>transform: scale, scalex, scaley, scalez((times))</li>
+        <div class="div">
+            in this <b>scale</b> property the will increase in size that much times which number will be entered in that bracket.
+            <br>example:: <b>transform: scale(1.6);</b>
+        <br>
+        this means that the item will get bigger 1.6 tims it's current size.
+        <br>
+        <b>example:: transform: scale(1.6);</b>
+        <div class="container1">
+            <div class="box6">box</div>
+        </div>
+        <br>
+        <b>example:: transform: scalex(1.6);</b>
+        <div class="container1"> 
+            <div class="box7">box</div>
+        </div>
+        <br>
+        <b>example:: transform: scaley(1.6);</b>
+        <div class="container1">
+            <div class="box8">box</div>
+        </div>
+        <br>
+        <b>example:: transform: scalez(1.6);</b>
+        <div class="container1">
+            <div class="box9">box</div>
+        </div>
+        </div>
+        <li>transform: skew(given degree);</li>
+        <div class="div">
+            in this property item appears like this.::
+            <br><b>example::</b>
+            <br>
+            <div class="container1">
+                <div class="box10">box</div>
+            </div>
+            <br>
+            <b>the skew only gets applied on the x and y axes it is not applied on the z axis.</b>
+            <br>
+        </div>
+        <li>transform: ranslate(given percentage);</li>
+        <div class="div">
+            using this property we can change the position of the elements in the x, y and z frames. generally this property is used to give the gap from top and bottom.
+            <br><b>example::</b> 
+            <br>
+            <div class="container1">
+                <div class="box11">box</div>
+            </div>
+        </div>
+        <li>transform-origin: value in percentage or absolute values;</li>
+        <div class="div">
+            using this property we can transform the origin of the box. The box rotates about its point of rotation i.e origin and we can change the point of rotation using this property.
+            <br><b>example::  transform-origin: 0% 0%;</b>
+            <div class="container1">
+                <div class="box12">box</div>
+            </div>
+            
+        </div>
+        <h3>this example page shows all the transform properties with their transition examples.</h3>
+        <div class="div">
+            <a href="demo transform.html">demo transform</a>
+        </div>
+        <span class="big">also we can apply all of these properties simultaneously.</span>
+    </ol>
+</body>
+</html>

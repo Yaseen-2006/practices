@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transitions in CSS</title>
+    <style>
+        ol > li {
+            font-size: 25px; 
+        }                            
+        .list{
+            font-size: 25px;
+            text-decoration: underline;
+        }
+        .container{
+            font-size: 0.75em;
+            margin: 25px;
+        }
+        .bazier{
+            text-decoration: underline;
+            text-decoration-thickness: 3px;
+        }
+        .example{
+            height: 50vh;
+            width: 60vw;
+            background-color: rgb(235, 198, 150);
+            margin: auto;
+        }
+        .box{
+            height: 5vh;
+            width: 6vw;
+            background-color: aqua;
+            transition: all 2s cubic-bezier(0.74, 0.04, 0.58, 1) 0s;
+            
+        }
+        .translate{
+           transform: translateX(10vw) translateY(10vh)  rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS trasitions</h1>
+    <ol>
+        <li><span class="list">transition-property.</span>
+            <div class="container">
+                this property is used to define the specific properperty on which we have to apply the transition.
+                <br>
+                It has the several values such as::
+                <br>
+                <b>NONE, ALL, and some specific property such as (width, height, scale, transform etc.)</b>
+                <br>
+                syntax:: 
+                <ul><li><b><u><pre>transition-property: none;</pre></u></b></li>
+                <li><b><u><pre>transition-property: all;</pre></u></b></li>
+                <li><b><u><pre>transition-property: transform, background-color;</pre></u></b></li>
+                <li><b><u><pre>transition-property: width, height;</pre></u></b></ul></li>
+            </div>
+        </li>
+        <li><span class="list">transition-duration.</span>
+            <div class="container">
+                using this transition property we can decide the duration of the transition. <b>(in how much time the transition will be completed.)</b>
+                <br>
+                syntax::
+                <br>
+                <ul>
+                    <li><b><u><pre>transition-duration: 1s;</pre></u></b></li>
+                    <li><b><u><pre>transition-duration: 2s;</pre></u></b></li>
+                    <li><b><u><pre>transition-duration: 3s;</pre></u></b></li>
+                    <li>and so on.........</li>
+                </ul>
+            </div>
+        </li>
+        <li><span class="list">transition-timing-function.</span>
+            <div class="container">
+                using this property we can decide the the behaviour of the transition. It has many values.
+                <br>
+                some of them are:: <b>ease-in, ease-out, ease-in-out, ease, cubic-bazier (this is the custom behaviour of the trasition we can customise the transition behaviour according to our need.)</b>
+                <br>
+                <b><u class="bazier">cubic-bazier:</u> this property can be customised in the browser.</b>
+                syntax::
+                <br>
+                <ul>
+                    <b><u><pre><li>transition-timing-function: ease-in;</li></pre></u></b>
+                    <b><u><pre><li>transition-timing-function: ease-out;</li></pre></u></b>
+                    <b><u><pre><li>transition-timing-function: ease-in-out;</li></pre></u></b>
+                    <b><u><pre><li>transition-timing-function: ease;</li></pre></u></b>
+                    <b><u><pre><li>transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);</li></pre></u></b>
+                </ul>
+            </div>
+        </li>
+        <li><span class="list">transition-delay.</span>
+            <div class="container">
+                this property specifies that the delay in the biginning of the trastion i.e <b> after how much time the transition will begin.</b>
+                <br>
+                in this property the value are entered in seconds i.e. <b>1s, 2s, 3s</b>
+                <br>
+                syntax:: <br>
+                <ul>
+                    <b><u><pre><li>transition-delay: 1s;</li></pre></u></b>
+                    <b><u><pre><li>transition-delay: 2s;</li></pre></u></b>
+                    <b><u><pre><li>transition-delay: 3s;</li></pre></u></b>
+                    <li>and so on.......</li>
+                </ul>
+            </div>
+        </li>
+        <li><span class="list">transition shorthand (transition: [all transition properties.];)</span>
+            <div class="container">
+               using this property we can include all the properties in one line.
+               <br>
+                in this property those all the four properties fit in one property and they have their specified places in that bracket.
+                <br>
+                example-syntax:: 
+                <br>
+                <b>transition: (transition-property) (transition-duration )(transition-timing-function) (transition-delay);</b>
+                <br>one more example-syntax::
+                <br>
+                <b>transition: all 2s ease-in-out 1s;</b>
+            </div>
+        </li>
+        <li><span class="list">Now we will see the example.</span></li>
+    </ol>
+        <div class="example">
+            <div class="box translate">
+
+            </div>
+        </div>
+        <br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/pHI4PBFM0wY?si=4rdLFd6-MWv_ru-F" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</body>
+</html>

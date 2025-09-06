@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Counseling for 12th Graders</title>
+    <style>
+        body {
+            background-color: #D3D3D3; /* You can replace this with any of the color codes above */
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: rgb(242, 242, 243);
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        header p {
+            margin: 0;
+            font-size: 1.2em;
+        }
+
+        section {
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+
+        h2 {
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 5px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 10px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px 0;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+
+        .button:active {
+            transform: scale(0.95);
+        }
+
+        .exams-list ul {
+            padding-left: 20px;
+        }
+
+        .counseling-note {
+            background-color: #e8f5e9;
+            border: 1px solid #c8e6c9;
+            border-radius: 5px;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Career Counseling</h1>
+        <p>Guidance for Students Who Have Just Passed 12th Grade</p>
+    </header>
+
+    <section id="introduction">
+        <h2>Introduction</h2>
+        <p><i>Congratulations on completing your 12th grade! This is a significant milestone, and now it’s time to think about the next steps in your career journey. Our goal is to provide you with information and resources to help you make informed decisions about your future.</i></p>
+    </section>
+
+    <section id="steps">
+        <h2>Steps to Consider</h2>
+        <ul>
+            <li><a href="#" onclick="showCareerOptions()">Explore Career Options</a></li>
+            <li><a href="#" onclick="showEducationalPaths()">Consider Educational Paths</a></li>
+            <li><a href="#" onclick="showSkillDevelopment()">Skill Development</a></li>
+            <li><a href="#" onclick="showCounselingTips()">Counseling Tips</a></li>
+            <li><a href="#" onclick="showExams()">Major Competitive Exams</a></li>
+        </ul>
+    </section>
+
+    <section id="advice">
+        <h2>Detailed Advice</h2>
+        <div id="content">
+            <p>Select an option from above to get detailed information.</p>
+        </div>
+        <div class="counseling-note">
+            <h3>Counseling Note</h3>
+            <p>Dear Students, this is a pivotal moment in your lives. Remember, the journey ahead may be filled with challenges, but it's also filled with opportunities. Take time to explore your interests, seek guidance from mentors, and remain adaptable. Your future is bright, and with determination and hard work, you can achieve your goals. Believe in yourself, and don’t hesitate to seek help when needed. Best of luck on your journey!</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Career Counseling. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showCareerOptions() {
+            document.getElementById('content').innerHTML = `
+                <h3>Explore Career Options</h3>
+                <p>Consider the following career paths based on your interests and strengths:</p>
+                <ul>
+                    <li><strong>Engineering:</strong> Mechanical, Civil, Electrical, Computer, Chemical, Aerospace, etc.</li>
+                    <li><strong>Medicine:</strong> Doctor, Nurse, Pharmacist, Physiotherapist, Radiologist, Medical Researcher, etc.</li>
+                    <li><strong>Business:</strong> Management, Marketing, Finance, Accounting, Human Resources, Entrepreneurship, etc.</li>
+                    <li><strong>Arts and Humanities:</strong> Literature, History, Philosophy, Sociology, Anthropology, Creative Writing, etc.</li>
+                    <li><strong>Design:</strong> Graphic Design, Fashion Design, Interior Design, UI/UX Design, Animation, etc.</li>
+                    <li><strong>Law:</strong> Lawyer, Legal Advisor, Paralegal, Judge, Legal Researcher, etc.</li>
+                    <li><strong>Science:</strong> Physics, Chemistry, Biology, Environmental Science, Research Scientist, etc.</li>
+                    <li><strong>Technology:</strong> Software Developer, Data Scientist, IT Support, Cybersecurity Analyst, Network Engineer, etc.</li>
+                    <li><strong>Education:</strong> Teacher, Educational Counselor, Curriculum Developer, School Administrator, etc.</li>
+                    <li><strong>Public Services:</strong> Police Officer, Firefighter, Social Worker, Public Health Administrator, etc.</li>
+                    <li><strong>Media and Communication:</strong> Journalist, Public Relations Specialist, Media Planner, Content Creator, etc.</li>
+                    <li><strong>Hospitality and Tourism:</strong> Hotel Management, Travel Consultant, Event Planner, Tour Guide, etc.</li>
+                    <li><strong>Skilled Trades:</strong> Electrician, Plumber, Carpenter, Mechanic, Welder, etc.</li>
+                    <li><strong>Defence:</strong> Army, Navy, Air Force, Coast Guard, National Defence Academy (NDA), Indian Military Academy (IMA), etc.</li>
+                    <li><strong>Agriculture:</strong> Agricultural Scientist, Agronomist, Soil Scientist, Horticulturist, etc.</li>
+                    <li><strong>Sports:</strong> Professional Athlete, Sports Coach, Sports Manager, Sports Nutritionist, etc.</li>
+                </ul>
+            `;
+        }
+
+        function showEducationalPaths() {
+            document.getElementById('content').innerHTML = `
+                <h3>Consider Educational Paths</h3>
+                <p>There are various educational paths you can take after 12th grade:</p>
+                <ul>
+                    <li><strong>Undergraduate Degrees:</strong> Pursue a bachelor's degree in your field of interest, such as BA, BSc, BCom, etc.</li>
+                    <li><strong>Diploma Courses:</strong> Shorter courses in specific areas can provide you with practical skills.</li>
+                    <li><strong>Competitive Exams:</strong> Consider preparing for entrance exams for professional courses, like IIT-JEE, NEET, CAT, etc.</li>
+                    <li><strong>Vocational Training:</strong> Engage in vocational training programs to gain hands-on experience in trades or specialized fields.</li>
+                </ul>
+            `;
+        }
+
+        function showSkillDevelopment() {
+            document.getElementById('content').innerHTML = `
+                <h3>Skill Development</h3>
+                <p>Building relevant skills can enhance your career prospects:</p>
+                <ul>
+                    <li><strong>Soft Skills:</strong> Communication, leadership, and teamwork are essential in any career.</li>
+                    <li><strong>Technical Skills:</strong> Depending on your field, learn relevant technical skills such as programming, graphic design, or data analysis.</li>
+                    <li><strong>Certifications:</strong> Obtain certifications in areas like digital marketing, project management, or any field relevant to your career goals.</li>
+                </ul>
+            `;
+        }
+
+        function showCounselingTips() {
+            document.getElementById('content').innerHTML = `
+                <h3>Counseling Tips</h3>
+                <p>Here are some tips to help you make informed decisions:</p>
+                <ul>
+                    <li><strong>Self-Assessment:</strong> Evaluate your interests, strengths, and weaknesses to identify suitable career paths.</li>
+                    <li><strong>Research:</strong> Gather information about different careers, educational institutions, and job markets.</li>
+                    <li><strong>Seek Guidance:</strong> Talk to career counselors, mentors, and professionals in your field of interest.</li>
+                    <li><strong>Set Goals:</strong> Define short-term and long-term goals for your education and career.</li>
+                </ul>
+            `;
+        }
+
+    
+        function showExams() {
+            document.getElementById('content').innerHTML = `
+                <h3>Major Competitive Exams</h3>
+                <p>These are some of the key competitive exams that can open doors to various career opportunities:</p>
+                <div class="exams-list">
+                    <ul>
+                        <li><strong>Engineering:</strong> 
+                            <a href="https://jeemain.nta.nic.in/" target="_blank">IIT-JEE</a>, 
+                            <a href="https://www.bitsadmission.com/" target="_blank">BITSAT</a>, 
+                            <a href="https://www.vit.ac.in/" target="_blank">VITEEE</a>, 
+                            <a href="https://mhtcet2024.mahacet.org/" target="_blank">MHT-CET</a>, 
+                            <a href="https://jceceb.jharkhand.gov.in/" target="_blank">JCECE</a>
+                        </li>
+                        <li><strong>Medical:</strong> 
+                            <a href="https://neet.nta.nic.in/" target="_blank">NEET</a>, 
+                            <a href="https://www.aiimsexams.org/" target="_blank">AIIMS</a>, 
+                            <a href="https://jipmer.edu.in/" target="_blank">JIPMER</a>, 
+                            <a href="https://pgimer.edu.in/" target="_blank">PGIMER</a>, 
+                            <a href="http://upcpmt.com/" target="_blank">UPCPMT</a>
+                        </li>
+                        <li><strong>Business:</strong> 
+                            <a href="https://www.iimcat.ac.in/" target="_blank">CAT</a>, 
+                            <a href="https://www.mat.org/" target="_blank">MAT</a>, 
+                            <a href="https://xatonline.in/" target="_blank">XAT</a>, 
+                            <a href="https://www.mba.com/gmat" target="_blank">GMAT</a>, 
+                            <a href="https://cmat.nta.nic.in/" target="_blank">CMAT</a>
+                        </li>
+                        <li><strong>Law:</strong> 
+                            <a href="https://clatconsortiumofnlu.ac.in/" target="_blank">CLAT</a>, 
+                            <a href="https://www.nlu.ac.in/ailet/" target="_blank">AILET</a>, 
+                            <a href="https://www.lsatindia.in/" target="_blank">LSAT India</a>
+                        </li>
+                        <li><strong>Design:</strong> 
+                            <a href="https://www.nid.edu/" target="_blank">NID DAT</a>, 
+                            <a href="https://www.nift.ac.in/" target="_blank">NIFT Entrance Exam</a>, 
+                            <a href="https://www.iitb.ac.in/~ucceed/" target="_blank">UCEED</a>
+                        </li>
+                        <li><strong>Defence:</strong> 
+                            <a href="https://www.joinindianarmy.nic.in/" target="_blank">Indian Army</a>, 
+                            <a href="https://joinindiannavy.gov.in/" target="_blank">Indian Navy</a>, 
+                            <a href="https://indianairforce.nic.in/" target="_blank">Indian Air Force</a>, 
+                            <a href="https://www.joinindiancoastguard.gov.in/" target="_blank">Indian Coast Guard</a>, 
+                            <a href="https://www.nda.nic.in/" target="_blank">National Defence Academy (NDA)</a>, 
+                            <a href="https://www.indianmilitaryacademy.in/" target="_blank">Indian Military Academy (IMA)</a>
+                        </li>
+                        <li><strong>Agriculture:</strong> 
+                            <a href="https://icar.org.in/" target="_blank">ICAR AIEEA</a>
+                        </li>
+                        <li><strong>Sports:</strong> 
+                            <a href="https://www.sportsauthorityofindia.nic.in/" target="_blank">Sports Authority of India</a>
+                        </li>
+                        <li><strong>General:</strong> 
+                            <a href="https://www.upsc.gov.in/" target="_blank">UPSC Civil Services</a>, 
+                            <a href="https://ssc.nic.in/" target="_blank">SSC CGL</a>, 
+                            <a href="https://www.rrbcdg.gov.in/" target="_blank">RRB NTPC</a>
+                        </li>
+                        <li><strong>Management:</strong> 
+                            <a href="https://www.ets.org/gre" target="_blank">GRE</a>, 
+                            <a href="https://www.ets.org/toefl" target="_blank">TOEFL</a>, 
+                            <a href="https://www.ielts.org/" target="_blank">IELTS</a>
+                        </li>
+                        <li><strong>Arts and Humanities:</strong> 
+                            <a href="https://www.ugc.ac.in/ugc-net-exam/" target="_blank">UGC NET</a>
+                        </li>
+                        <li><strong>Hospitality:</strong> 
+                            <a href="https://nchmjee.nta.nic.in/" target="_blank">NCHMCT JEE</a>
+                        </li>
+                        <li><strong>Skilled Trades:</strong> 
+                            <a href="https://www.apprenticeship.gov.in/" target="_blank">Apprenticeship Tests</a>
+                        </li>
+                        <li><strong>Public Services:</strong> 
+                            <a href="https://www.upsc.gov.in/" target="_blank">State Public Service Commissions</a>, 
+                            <a href="https://www.fssai.gov.in/" target="_blank">Firefighter Exams</a>
+                        </li>
+                    </ul>
+                </div>
+            `;
+        }
+    </script>
+    <h1 align="center">here are some AV's in hindi</h1>
+    <hr>
+    <ol type="a" align="center">
+    <li><iframe width="560" height="315" src="https://www.youtube.com/embed/BvCCLk-R-4w?si=7dxv4tGoSPmiCmjb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></li>
+    <li><iframe width="560" height="315" src="https://www.youtube.com/embed/h-NjW4Wupzs?si=gEaQYXkkbfPfve3S" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></li>
+</ol>
+<br>
+<hr>
+<br>
+<h1 align="center"> here are some av's in english</h1>
+<hr>
+<br>
+<ol type="a" align="center">
+    <li><iframe width="560" height="315" src="https://www.youtube.com/embed/qi4sgAVPAyc?si=7Bvssf3aKRFyTOxd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></li>
+    <li><iframe width="560" height="315" src="https://www.youtube.com/embed/7Q8hG0pYGn8?si=FNgxURaVeZO-9X-s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></li>
+    <li><iframe width="560" height="315" src="https://www.youtube.com/embed/XIDkLC8loiU?si=rAfFy5H55xF96vT0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></li>
+    <li><iframe width="560" height="315" src="https://www.youtube.com/embed/qaCBy1PvzPk?si=ErCW4BdAMTWKgdmr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></li>
+</ol>
+<script>
+    alert("this is my very first AI generated website")
+</script>
+</body>
+</html>

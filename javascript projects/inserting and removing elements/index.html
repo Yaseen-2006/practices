@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inserting and removing the elements.</title>
+    <style>
+        ol>.list1 {
+            font-size: 30px;
+            font-weight: 600;
+        }
+
+        .container,
+        p {
+            font-size: 1.25rem;
+            margin: 20px;
+        }
+
+        .sp1 {
+            font-weight: 600;
+            color: red;
+            /* text-transform: capitalize; */
+        }
+
+        .list2 {
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+
+        .inner-list {
+            margin-top: 20px;
+        }
+
+        table {
+            border: 2px solid black;
+        }
+
+        tbody td {
+            color: red;
+            padding: 10px;
+            font-weight: 600;
+        }
+
+        .primary {
+            font-size: 30px;
+            font-weight: 700;
+            text-decoration: underline;
+            text-decoration-style: dotted;
+            padding-bottom: 30px;
+            color: rgb(73, 70, 70);
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>inserting and removing elements in the JS.</h1>
+    there are a lot of functions which we have to learn.
+    <ul>
+        <li class="primary">DOM methods.</li>
+        <ol>
+            <li class="list1">innerText</li>
+            <div class="container">
+                shows the thext presenet in the given container
+            </div>
+            <li class="list1">innerHTML and OuterHTML </li>
+            <div class="container">
+                <b>innerHTML <br>returns the HTML content written in the given selector.</b>
+                <br>
+                <p>
+                    <B>EXAMPLE:</B>
+                    <br>
+                    document.queryselector(".box").innerHTML
+                </p>
+                it will return the HTML written in that paricular container.
+                <br>
+                <p>
+                    <b>OuterHTML</b>
+                    <br>
+                    returns the HTML present inside the selected container and the HTML of the container selected
+                    itself.
+                </p>
+            </div>
+            <li class="list1">tagName</li>
+            <div class="container">
+                returns the tagName of the selected container.
+            </div>
+            <li class="list1">nodeName</li>
+            <div class="container">
+                this returns the tagname of the nodes.
+                <br>
+                nodeName is different from tagName because it returns the name of the node of the slected Node like
+                comment, text etc.
+            </div>
+            <li class="list1">textContent</li>
+            <div class="container">
+                this returns all the text content present inside the selected container.
+            </div>
+            <li class="list1">manupulations:</li>
+            <div class="container">
+                we can manupulate with the HTML using the javascript.
+                <ol class="inner-list">
+                    <li class="list2">example - 1 (hidden)</li>
+                    <div class="container">
+                        <b>document.querySelector('.mainbody').lastElementChild.hidden</b>
+                        <br>
+                        <br>
+                        if the hidden attribute is not there in the HTML this will return false and we can make it true
+                        by :
+                        <br>
+                        <br>
+                        <b>document.querySelector('.mainbody').lastElementChild.hidden = true</b>
+                        <br>
+                        <br>
+                        this will hide that element by adding the hidden attribute in the original dcoument.
+                        <li class="list2">HTML changes</li>
+                        <div class="container">
+                            similarly we can change the inner HTML of the selected element.
+                            <br>
+                            EXAMPLE:
+                            <p>
+                                <b> document.querySelector('.mainbody').lastElementChild.innerHTML = 'this is changed
+                                    HTML!!'</b>
+                            </p>
+                            this will change the inner HTML of that element and return the new entered HTML.
+                        </div>
+                    </div>
+                </ol>
+            </div>
+            <li class="list1">Attributes manupulations</li>
+            <div class="container">
+                <ol class="list">
+                    <li class="list2">hasAttribute("attribute name")</li>
+                    <div class="container">
+                        checks for the enetred attribute is present in the selected element or not.
+                    </div>
+                    <li class="list2">getATtribute("attribute name")</li>
+                    <div class="container">
+                        returns the enetered attribute.
+                    </div>
+                    <li class="list2">setAttribute()</li>
+                    <div class="container">
+                        if we want to insert the any attribute in the HTML we use this property and inside the bracket
+                        we enter the name of the attribute that we want to add.
+                        <BR>
+                        EXAMPLE:
+                        </BR>
+                        <P>
+                            <B>document.querySelector('.box-2').setAttribute('id', 'this')</B>
+                        </P>
+                    </div>
+                    <li class="list2">removeAttribute(Attribute name)</li>
+                    <div class="container">
+                        this removes the desired Attribute from the selected element.
+                    </div>
+                </ol>
+            </div>
+            <li class="list1">designMode</li>
+            <div class="container">
+                we can change and manupulate the data of any website by setting the designMode to 'on'
+            </div>
+            <li class="list1">dataset : data - *attribute</li>
+            <div class="container">
+                we can add the custom data in the HTML by adding the data attribute followed by a hyphen ( - ) and the
+                name of the data.
+            </div>
+        </ol>
+        <li class="primary">insertion methods</li>
+        <ol>
+            <div class="container">
+                we can insert the elements in the HTML by using the following properties and just adding the things we want to add in the page in the double inverted comas ( "" )
+            </div>
+            <li class="list1">createElement(' <span class="sp1">element name</span> ')</li>
+            <div class="container">
+                we can create any element we want to insert in the HTML page by using this property.
+                <br>
+                <p>
+                    to create an element for insertion we create it in a variable so that we can insert it in the page easily.
+                    <br>
+                    syntax : 
+                    <br>
+                    let (variable) = document.createElement(' element name ')
+                </p>
+            </div>
+            <li class="list1">append (name of the variable created)</li>
+            <div class="container">
+                using this property we can insert the elements which we made in the variable in the page or in the specified location.
+                <br>
+                this is also used to insert the data in the page. In short this is used to insert anything in the page.
+                <p>
+                    EXAMPLE : 
+                    <br>
+                    documment.querySelector('.mainbody').append(div)
+                    <br>
+                    <br>
+                    <b>
+                    IF WE INSERT THE NEW ELEMENT IN THE CONTAINER THE NEW ELEMENT WILL BY DEFAULT BECOME THE LAST CHILD OF THAT CONTAINER.</b>
+                </p>
+                <span class="sp1">all the examples are written in <u>script.js</u></span>
+            </div>
+            <li class="list1">innerText = ''</li>
+            <div class="container">
+                this is used to enter the desired text in the desired HTML postion.
+                <br>
+                this will insert only the text in that position.
+            </div>
+            <li class="list1">innerHTML = ''</li>
+            <div class="container">
+                this is used to enter the desired HTML in the desired HTML postion.
+                <br>
+                if we apply HTML tags in this property it will retain that property in this js property.
+                <br>
+                this will insert the HTML in that position.
+            </div>
+            <li class="list1">prepend(name of the variable created)</li>
+            <div class="container">
+                <h3>this inserts the element created at the beginning of the container.</h3>
+            </div>
+            <li class="list1">before(name of the variable created)</li>
+            <div class="container">
+                <h3>this inserts the created element before the node.</h3> 
+            </div>
+            <li class="list1">after(name of the variable created)</li>
+            <div class="container">
+                <h3> this inserts the element created after the node.</h3>
+            </div>
+            <li class="list1">node.replaceWith(name of the variable created)</li>
+            <div class="container">
+                replaces the given created div with the selected node.
+                <br>
+                document.queryselector('.mainbody').lastElementChild.replaceWith(newdiv)                
+                <br>
+                <br>
+                this will replace the lastElementChild of the element with 'minbody' class with the newDiv element.
+            </div>
+            <li class="list1">insertAdjecent HTML / Text / Element</li>
+            <div class="container">
+                <ol class="inner-list">
+                    <p>
+                        this is the method used to insert the <u>html</u> or <u>text</u> or <u>Element</u> adjecent the enetred position.
+                    </p>
+                    <li class="list2">"beforebegin"</li>
+                    <div class="container">
+                        this inserts the element immedietly before the opening of the enetered container.
+                    </div>
+                    <li class="list2">"afterbegin"</li>
+                    <div class="container">
+                        this inserts the element inside the container at the absolute beginning. this does the work same as the prepend do.
+                    </div>
+                    <li class="list2">"beforeend"</li>
+                    <div class="container">
+                        this inserts the element into the end of the container.
+                    </div>
+                    <li class="list2">"aferend"</li>
+                    <div class="container">
+                        this inserts the element after the end of the container means just after the container closes. this does the same work as after() do.
+                    </div>
+                </ol>
+                <p>
+                  <u> this properties apply on all the three properties <b>HTML, text and the elements.</b></u>
+                </p>
+            </div>
+            <li class="list1">node.remove()</li>
+            <div class="container">
+                this function removes the selected node from the appearing HTML page.
+            </div>
+            <li class="list1">className</li>
+            <div class="container">
+                    this shows us the value of classlist in the browser.
+            </div>
+            <li class="list1">classList</li>
+            <div class="container">
+                works with the list of classes that are given to the particular element.
+                <br>
+                it has several values :
+                <ol class="inner-list">
+                    <li class="list2">classList.add("name of class")</li>
+                    <div class="container">
+                        adds the class to the slected element or the slected query that can be the id or a class.
+                    </div>
+                    <li class="list2">classList.remove("name of class")</li>
+                    <div class="container">
+                        removes the class from the slected element or the slected query that can be the id or a class.
+                    </div>
+                    <li class="list2">classList.toggle("name of class")</li>
+                    <div class="container">
+                       adds the class if it hasn't added otherwise removes that class.
+                    </div>
+                </ol>
+            </div>
+        </ol>
+    </ul>
+</body>
+
+</html>

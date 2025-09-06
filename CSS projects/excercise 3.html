@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS card deign</title>
+    <style>
+        
+        body {
+            background-color: grey;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+        }
+
+        .card {
+            background-color: white;
+            width: 344px;
+            height: auto;
+            border-radius: 15px;
+            padding: 7px;
+            margin: auto;
+            margin-top: 140px;
+            box-shadow: -1px 1px 16px 11px antiquewhite;
+            /* transition: box-shadow, transform 0.3s ease-in-out 0s; */
+            transition-property: box-shadow,transform;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 0s;
+        }
+
+        .image img {
+            border-radius: 15px;
+        }
+
+        .cap span {
+            border: 1px solid grey;
+            color: grey;
+            padding: 0px 12px;
+            border-radius: 15px;
+            margin: 5px;
+
+        }
+
+        .cap {
+            margin: 20px 30px;
+        }
+
+        .head>h2 {
+            margin: 30px 10px;           
+
+    }
+    .para{
+        color: grey;
+        margin: 20px 10px;
+    }
+    .button{
+        text-align: center;
+        
+    }
+    .button button{
+        background-color: #7dc4fd81;
+        color: rgb(74, 90, 233);
+        padding: 10px 20px;
+        border-radius: 50px;
+        border: none;
+        font-size: 15px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        transition-property: background-color, color;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in-out;
+        transition-delay: 0s;
+        
+    }
+    .button button:hover{
+        background-color: rgb(75, 75, 245);
+        color: white;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    .card:hover{
+        transform: scale(1.07);
+        box-shadow: -1px 1px 16px 11px rgb(196, 162, 118);;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="card transform">
+        <div class="image">
+            <img src="https://images.pexels.com/photos/3880179/pexels-photo-3880179.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="man with boat" width="344">
+        </div>
+        <div class="cap">
+            <span>Nature</span>
+            <span>Lake</span>
+        </div>
+        <div class="head">
+            <h2>Yaseen</h2>
+        </div>
+        <div class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias neque unde autem aut quod
+            reiciendis asperiores alias sunt, ratione beatae quia dolorem ipsum laudantium. Facilis, officiis?
+            Perferendis facere voluptas earum quam? Assumenda enim recusandae voluptatum fugiat necessitatibus eum harum
+            excepturi!</div>
+        <div class="button">
+            <a href="excercise 4.html"><button>Read More</button></a>
+        </div>
+    </div>
+    <div class="card transform">
+        <div class="image">
+            <img src="https://images.pexels.com/photos/3880179/pexels-photo-3880179.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="man with boat" width="344">
+        </div>
+        <div class="cap">
+            <span>Nature</span>
+            <span>Lake</span>
+        </div>
+        <div class="head">
+            <h2>Yaseen</h2>
+        </div>
+        <div class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias neque unde autem aut quod
+            reiciendis asperiores alias sunt, ratione beatae quia dolorem ipsum laudantium. Facilis, officiis?
+            Perferendis facere voluptas earum quam? Assumenda enim recusandae voluptatum fugiat necessitatibus eum harum
+            excepturi!</div>
+        <div class="button">
+            <a href="excercise 4.html"><button>Read More</button></a>
+        </div>
+    </div>
+    
+</body>
+
+</html>

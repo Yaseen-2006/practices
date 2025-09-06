@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS box model</title>
+    <style>
+        /* margin collapse concept applicable here   */
+        /* box-sizing: border-box concept is also here  */
+        .div{
+            background-color: blueviolet;
+            color: aliceblue;
+        }
+        .div2{
+            height: 100px;
+            border: 10px solid blue;
+            margin: 40px;
+            box-sizing: border-box;
+            
+        }
+        .div1{
+            margin: 30px;
+            border: 10px solid blue;
+            height: 100px;
+            box-sizing:border-box
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="div div1">
+        <p>
+            I am a paragraph in the first div.
+        </p>
+    </div>
+    <div class="div div2">
+        <p>
+            I am a paragraph in the second div. 
+        </p>
+        
+    </div>
+    <div>
+        <figure>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Xrxd6cEajhM?si=yVmUXjFoLwF6nwiD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </figure>
+    </div>
+</body>
+</html>

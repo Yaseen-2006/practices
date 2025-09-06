@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS variables </title>
+    <style>
+        :root {
+            --color: blue;
+            --seccolor: lightblue;
+            --txtcolor: white;
+            --defpad: 30px;
+            --defop: 0.5;
+            --defmar: 12px;
+        }
+
+        body {
+            background-color: antiquewhite;
+        }
+
+        .div1 {
+            font-size: 25px;
+        }
+
+        .div2 {
+            font-size: 0.75em;
+            margin: 23px;
+        }
+
+        .sp1 {
+            margin-left: 25px;
+        }
+        .div3{
+            width: 40vw;
+            height: 10vw;
+            border: 2px solid red;
+            text-align: center;
+            padding: 12px;
+            box-sizing: border-box;
+            background-color: var(--color);
+            color: var(--txtcolor);
+            border-color: var(--seccolor);
+            margin: var(--defmar);
+
+        }
+        .div4{
+            width: 40vw;
+            height: 10vw;
+            border: 2px solid red;
+            text-align: center;
+            padding: 12px;
+            box-sizing: border-box;
+            background-color: var(--color);
+            color: var(--txtcolor);
+            border-color: var(--seccolor);
+            --color: rgb(233, 140, 140);
+            --seccolor: rgb(100, 3, 3);
+            --txtcolor: rgb(49, 16, 16);
+            margin: var(--defmar);
+        }
+        #padding{
+            padding: var(--defpad);
+        }
+        #opacity{
+            font-weight: 600;
+            opacity: var(--defop);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS variables.</h1>
+    <div class="div1">
+        <p class="sp1">&nbsp;&nbsp;&nbsp;&nbsp;CSS variables are generally used to change the color of the website where
+            we want to change the color of the website at multiple places simultaneously. there are two types of
+            variables. 
+            <br>
+            but there are more things we can use as the variables such as padding, margin, opacity, 
+        </p>
+        <ol>
+            <li>Global variables.
+                <div class="div2">
+                    the global variables are used to change the color of the website on multiple places and it is
+                    declared in the style tag ,
+                    <br>
+                    declaration syntax:
+                    <pre><b>:root{
+    --color: blue;
+    --seccolor: lightblue;                   
+                    </b></pre>
+                    <br>
+                    and then called in the address where it will be applied:
+                    <br>
+                    example::
+                   
+                    <div class="div3">
+                        I am the div that has colored using the global variables.
+                    </div>
+                    <pre>
+                        <b>
+                            :root {
+                                --color: blue;
+                                --seccolor: lightblue;
+                                --txtcolor: white;
+                            }
+                            .div3{
+                                width: 40vw;
+                                height: 10vw;
+                                border: 2px solid red;
+                                text-align: center;
+                                padding: 12px;
+                                box-sizing: border-box;
+                                background-color: var(--color);
+                                color: var(--txtcolor);
+                                border-color: var(--seccolor);
+                            }</b></pre>
+                    <br>
+                    we can use these variables anywhere in the website to apply these colors in the backgroun, text, and
+                    averywhere the color is applied.
+                    <b>We make the global variable in the :root{ } which will be declared.</b>
+                </div>
+            <li>
+                local variables.
+                <div class="div2">
+                    local variables are the varibles that are declared in the individual destinations where the global
+                    variables are declared. we can also overwrite the variables and give them different colors and that
+                    color will be applied to the desired destination.
+                    <br>
+                    example::
+                    <br>
+                    <div class="div4">
+                        i am the div colored using the local variables.
+                    </div>
+                    <pre>
+                        <b>:root {
+                            --color: blue;
+                            --seccolor: lightblue;
+                            --txtcolor: white;
+                        }
+                            .div4{
+                            width: 40vw;
+                            height: 10vw;
+                            border: 2px solid red;
+                            text-align: center;
+                            padding: 12px;
+                            box-sizing: border-box;
+                            background-color: var(--color);
+                            color: var(--txtcolor);
+                            border-color: var(--seccolor);
+                            --color: rgb(233, 140, 140);
+                            --seccolor: rgb(100, 3, 3);
+                            --txtcolor: rgb(49, 16, 16);
+                        }</b>
+                    </pre>
+                    
+                </div>
+            </li>
+                exception:: <b>when the variable is not found then the color will be applied which is given next to it</b>
+                <br>example::
+                <pre><b>.div{
+            backgroun-color: var(--color, blue);
+                }</b></pre> 
+                here when the variable "--color" will not be foun then the blue color will be applied.
+        </ol>
+        <ul>
+            <li>
+                padding using variables.
+                <div class="div2">
+                    example::
+                    <br>
+                    <div class="div3" id="padding">this has the padding using variable.</div>
+                    <div class="div3" id="padding">this has the padding using variable.</div>
+                    <div class="div3" id="padding">this has the padding using variable.</div>
+
+                </div>
+            </li>
+            <li>
+                opacity using the variabes.
+                <div class="div2">
+                    example::
+                    <br>
+                    <div class="div4" id="opacity">
+                        this has the adjusted text opacity using the variabes.
+                    </div>
+                    <div class="div4" id="opacity">
+                        this has the adjusted text opacity using the variabes.
+                    </div>
+                    <div class="div4" id="opacity">
+                        this has the adjusted text opacity using the variabes.
+                    </div>
+                </div>
+            </li>
+        </ul> 
+    </div>
+    <figure>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ovRU9xHfly4?si=-CLItuTjUdtZBuj4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </figure>
+</body>
+</html>

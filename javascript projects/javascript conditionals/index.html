@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript conditionals.</title>
+    <style>
+        ol>.list {
+            font-size: 27px;
+            font-weight: 600;
+            text-decoration: underline;
+        }
+
+        .container {
+            font-size: 1.25rem;
+            margin: 20px;
+        }
+
+        .para1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .list2 {
+            padding-top: 25px;
+            font-size: 25px;
+        }
+
+        .table1 {
+            border: 2px solid;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>javascript conditionals.</h1>
+    <ol>
+        <li class="list">if condition.</li>
+        <div class="container">
+            the if statement is same as c++ in the javascript using this we can check the conditions.
+            <br>
+            EXAMPLE::
+            <pre><b>
+let age = 34;
+if(age>18){
+    console.log("this person can drive...");
+}
+else{
+    console.log("this person is under 18 and cannot drive..");
+}
+            </pre></b>
+        </div>
+        <li class="list">operators in javascript.</li>
+        <div class="container">
+            <p class="para1">
+                operators in javascript are several operators:-
+                <br>
+                for more info read the JS code!!
+                <br>
+            <ol>
+                <li class="list2">arithematical operators:</li>
+                <div class="container">
+                    these operators are used to perform arithematical operations like:
+                    <br>
+                    <b> + (addition), - (subtraction), * (multiplicarion), / (division), % (modulus), **
+                        (exponentiation), ++ (incriment), -- (decrement).</b>
+                    <br>
+                    these all are the arithematical operators used in javascript.
+                </div>
+                <li class="list2">assignment operators:</li>
+                <div class="container">
+                    these operators are used to asiign the values to the variables.
+                    <br>
+                    these include:
+                    <table class="table1">
+                        <thead>
+                            <tr>
+                                <td class="table1">operators</td>
+                                <td class="table1">meanings.</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="table1">x=y</td>
+                                <td class="table1">x = y</td>
+                            </tr>
+                            <tr>
+                                <td class="table1">x+=y</td>
+                                <td class="table1">x = x+y</td>
+                            </tr>
+                            <tr>
+                                <td class="table1">x-=y</td>
+                                <td class="table1">x = x-y</td>
+                            </tr>
+                            <tr>
+                                <td class="table1">x*=y</td>
+                                <td class="table1">x = x*y</td>
+                            </tr>
+                            <tr>
+                                <td class="table1">x/=y</td>
+                                <td class="table1">x = x/y</td>
+                            </tr>
+                            <tr>
+                                <td class="table1">x %= y</td>
+                                <td class="table1">x = x%y</td>
+                            </tr>
+                            <tr>
+                                <td class="table1">x **= y</td>
+                                <td class="table1">x = x**y [x (to the power) y]</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <li class="list2">comparison operators:</li>
+                <div class="container">
+                    <table class="table1">
+                        these operators are mojorly used to check the conditions in the if statement and sometimes in
+                        other places.
+                        <br>
+                        these include:
+                        <thead>
+                            <tr>
+                                <td class="table1">operators</td>
+                                <td class="table1">meanings</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="table1">==</td>
+                                <td class="table1">equal to</td>
+                            </tr>
+                            <tr>
+                                <td class="table1">!=</td>
+                                <td class="table1">not equal to</td>
+                            </tr>
+                            <tr>
+                                <td class="table1">===</td>
+                                <td class="table1">equal value and type <br>(this operator is used to check the equal
+                                    value and the equal type.) <br>and it is run in the powershell of node js.</td>
+                            </tr>
+                            <tr>
+                                <td class="table1">!==</td>
+                                <td class="table1">not equal value or not equal type</td>
+                            </tr>
+                            <tr>
+                                <td class="table1">&gt;</td>
+                                <td class="table1">greater than</td>
+                            </tr>
+                            <tr>
+                                <td class="table1">&lt;</td>
+                                <td class="table1">less than</td>
+                            </tr>
+                            <tr>
+                                <td class="table1">&gt;=</td>
+                                <td class="table1">greater than or equal to</td>
+                            </tr>
+                            <tr>
+                                <td class="table1">&lt;=</td>
+                                <td class="table1"> less than or equal to</td>
+                            </tr>
+                            <tr>
+                                <td class="table1">?</td>
+                                <td class="table1">ternary operator</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="container">
+                    <pre><b>
+> 34+45
+79
+> 7894545454545676 + 4564 * 56038434/786
+7894545779939331
+> "34" === "34"
+true
+> "34" === "34"
+true
+> "34" != 35
+true
+> 34>12
+true
+> 34>67
+false
+> 34<56
+true
+> 45<12
+false
+> 45>=43
+true
+> 45>=45
+true
+> 45>=46
+false
+> 67&lt;=34
+false
+> 45&lt;=78
+true
+</pre></b>
+                    <div class="container">
+                        turnary operator ;
+                        <br>
+                        it is the single line if, then , else conditional which reduces the effort. it's syntax is::
+                        <br>
+                        <b><pre>c = if  condition ?(statement):(else statement)</pre></b>
+                        <b><pre>c = a>b ?(a-b):(b-a)</pre></b>
+                        this means:
+                        <pre>
+                            <b>
+if(a>b){
+    c = a-b;
+}
+else{
+    c = b-a;
+}
+                            </b>
+                        </pre>
+                        EXAMPLE::
+                        <pre>
+                            <b>
+> a=23
+23
+> b=34
+34
+> c = a>b ?(a-b):(a*b)
+782
+> c
+782
+                            </b>
+                        </pre> 
+                        for javascript consider the attached code-file.
+                    </div>
+                    the above operations in the node engine can be performed by applying those.
+                </div>
+                <li class="list2">logical operators:</li>
+                <div class="container">
+                    the logical operators are shown below.
+                    <ol>
+                        <li class="list2">&& (and);</li>
+                        <div class="container">
+                            this is the logical operator wich works when there are two contions to check.
+                            <br>
+                            and it's value is true when both the conditions are true if anyone of the condition will be false  then the output will be false. <br>
+                            EXAMPLE::
+                            <pre>
+                                <b>
+> a=23,b=34
+34
+> a!=b && a
+>true                                    
+                                </b>
+                            </pre> 
+                            hereboth the conditions are true.
+                            <pre>
+                                <b>
+> a!=b && a>b
+false                                    
+                                </b>
+                            </pre>
+                            but here one condition is not true.                         
+                        </div>
+                        <li class="list2">|| (OR)</li>
+                        <div class="container">
+                            this logical operator also works when there are two inputs.
+                            <br>
+                            it's value is true when there is any one of the condition is true and the value is false when both the values are flase.
+                            EXAMPLE::
+                            <b><pre>
+> a=23
+23
+> b=45
+45
+> typeof a == typeof b || a == b
+true
+>
+                            </pre></b>
+                            here any one of the condition is true.
+                            <pre>
+                                <b>
+> a == b || a >= b
+false
+                                </b>
+                            </pre>
+                            but here both the conditions are false.
+                        </div>
+                        <li class="list2">! (not)</li>
+                        <div class="container">
+                            the not operator only takes one input to chech the condition.
+                            EXAMPLE::
+                            <br>
+                            <pre><b>
+> !true
+false
+> !false
+true
+> true
+true
+> false
+false
+                            </b></pre>
+                            here we can see.
+                        </div>
+                    </ol>
+                </div>
+            </ol>
+            </p>
+        </div>
+    </ol>
+    <script src="script.js"></script>
+</body>
+
+</html>

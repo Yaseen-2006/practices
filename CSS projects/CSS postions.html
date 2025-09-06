@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS positions</title>
+    <style>
+        .ol1 {
+            font-size: 30px;
+            margin: 50px;
+        }
+
+        .div {
+            font-size: 0.75em;
+            margin: 30px;
+        }
+
+        .box {
+            border: 2px solid;
+            margin: 20px;
+            width: 50vw;
+            height: 10vh;
+            background-color: antiquewhite;
+            text-align: center;
+            padding: 30px;
+            box-sizing: border-box;
+        }
+
+        .box1 {
+            background-color: aqua;
+            position: relative;
+            z-index: 1;
+            top: -50px;
+            left: 50px;
+        }
+
+        .parent {
+            margin: 34px;
+            border: 2px solid crimson;
+            position: relative;
+            text-align: center;
+            padding-bottom: 40px;
+        }
+
+        .box2 {
+            position: absolute;
+            top: 0px;
+            right: 20px;
+            overflow: auto;
+        }
+
+        .parent1 {
+            margin: 34px;
+            border: 2px solid crimson;
+            /* position: relative; */
+            text-align: center;
+            padding-bottom: 40px;
+        }
+
+        .parent2 {
+            position: relative;
+        }
+        .box3{
+            
+            border: 2px solid;
+            margin: 20px;
+            width: 70vw;
+            height: 7vh;
+            background-color: antiquewhite;
+            text-align: center;
+            box-sizing: border-box;
+            position: fixed;
+            bottom: -5%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        CSS positions
+    </h1>
+    <ol class="ol1">
+        <li>static positions: syntax:: <b>position: static;</b>
+            <div class="div">
+                this position is the default position of any div we include in the html page. <b> this does not allow us
+                    to change the position of the div.</b>
+                <br>example::
+                <div class="box">
+                    this div has the static position..
+                </div>
+                in this situation we can't change the height and the z-index of the given div.. and can't move the div left or right.
+            </div>
+        </li>
+        <li>relative position: syntax:: <b>position: relative;</b>
+            <div class="div">
+                in this position of the div we can change the <b><u>z-index</u></b> and the <b><u>top bottom and right
+                        and left positions.</u></b>
+                <br>example::
+
+            </div>
+            <div class="box div">
+                this div has static position
+            </div>
+            <div class="box div box1">
+                this div has relative position.
+            </div>
+            <div class="div">
+                syntax of above things:: <b>static div:: <u> position: static;</u>
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;relative
+                    div:: <u>position: realative; <br>
+                    </u></b>
+                <code><pre><b>background-color: aqua; <br> position: relative; <br> z-index: 1; <br> top: -50px; <br> left: 50px; </pre></code></b>
+            </div>
+
+        </li>
+
+        <li>
+            absolute position:: syntax:: <b>position: absolute;</b>
+            <div class="div">
+                in this position the box in which the position property is applied that box will <b><u>try to adjust its
+                        position according to the nearest positioned ancestor i.e the nearest positioned tag.</u></b>
+                <br>example::
+                <br>
+                <div class="parent">
+                    this is the parent div and have the position relative.
+                    <div class="box div">
+                        this div has the static position.
+                    </div>
+                    <div class="box div box2">
+                        this div has the absolute position. <b><u>so the position applied to it will be adjusted
+                                according to the nearest positioned container i.e the parent box</u></b>
+                    </div>
+                    the box behind has the static position (by default)
+                </div>
+                if i would not give the position relative to the parent box something like this could happen::
+                <div class="parent2">
+                    <b><u>this section is another div having relative position.</u></b>
+                    <br>
+                    <br><br><br><br><br>
+
+                    <div class="parent1">
+                        this is the parent div and have the position static.
+                        <div class="box div">
+                            this div has the static position.
+                        </div>
+                        <div class="box div box2">
+                            this div has the absolute position. <b><u>so the position applied to it will be adjusted
+                                    according to the nearest positioned container i.e the parent box have the position
+                                    static so it would adjust the position according to its parent's parent div because
+                                    i have set it on relative position</u></b>
+                        </div>
+                    </div>
+                </div>
+                <b><u>Exception: : transform, filter, or perspective properties can also make an element appear as positioned.
+                </u></b>
+                    <br>
+                    transform: translate(0);
+                    <br>
+                    filter: invert(0);
+                    <br>
+                    perspective: 0em; <br><br>
+                    <b>Will learn this in upcoming videos.</b>
+            </div>
+        <li>
+            Fixed position: syntax:: <b>position: fixed;</b>
+            <div class="div">
+                in the fixed position when the div is given the position fixed it dos not move even we scroll..
+                <br>
+                example::
+                <br>
+                <div class="box3">
+                    this is the fixed div. having the position:fixed;
+                </div>
+                syntax of this div::
+                <br>
+                <b>
+
+                    <pre>
+                        .box3{
+                            
+                            border: 2px solid;
+                            margin: 20px;
+                            width: 70vw;
+                            height: 7vh;
+                            background-color: antiquewhite;
+                            text-align: center;
+                            box-sizing: border-box;
+                            position: fixed;
+                            bottom: -5%;
+                        }
+                    </pre>
+                </b>
+                <b><u>the example is fixed to the bottom </u></b>
+            </div>
+        </li>
+        <li>
+            sticky position: syntax:: <b>position: sticky;</b>
+            <div class="div">
+                in this positon the div is sticked to the position we want when we scroll to that particular position.
+                <br>
+                example::
+            refer this page for the example.👇
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="sticky position example.html"><u>EXAMPLE PAGE</u></a><br>
+            code::
+            <pre>
+
+                <b>
+                    .sticky{
+                        border: 2px solid blue;
+                        height: 10vh;
+                        width: 100vw;
+                        text-align: center;
+                        padding: 20px;
+                        box-sizing: border-box;
+                        font-size: larger;
+                        background-color: aqua;
+                        position: sticky;
+                        top: 5px;
+                    }
+                </b>
+            </pre>
+            </div>
+        </li>
+    </ol>
+    <figure>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/cOw6tgH6P20?si=z_qLSgwq7s2_sWur" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </figure>
+</body>
+
+</html>

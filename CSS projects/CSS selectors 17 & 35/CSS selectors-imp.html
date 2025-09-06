@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>important CSS selectors</title>
+    <style>
+        /* element selectors */
+        div{
+            background-color: blue;
+            color: white;
+        }
+        /* class selectors */
+        .green{
+            background-color: black;
+
+        }
+        /* ID selectors */
+        #maroon{
+            background-color: maroon;
+        }
+        /* child selectors: Most important. */
+        div > p{
+            color: gray;
+        }
+        /* descendent selector */
+        div article{
+            color: black;
+            background-color: violet;
+        }
+        /* universal selector */
+        * {
+            margin: 6px;;
+            padding: 6px;;
+        }
+        /* pseudo selector */
+        a:link{
+            color: rgb(0, 0, 0);
+            background-color: aliceblue;
+        }
+        a:active{
+            color: green;
+        }
+        a:hover{
+            background-color: maroon;
+        }
+        a:visited{
+            background-color: black;
+            color: aliceblue;
+        }
+        p:first-child{
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        I am a div.
+    </div>
+    <div class="green">
+        i am a paragraph.
+    </div>
+    <div id="maroon">
+        <p>para 1</p>
+        <p>
+            i am a paragraph inside the div having an id.
+        </p>
+    </div>
+    <div>
+        <main>
+            <article>                
+                    I am a paragraph inside the div inside main inside article having the id black.                
+            </article>
+        </main> 
+        <a href="https://www.facebook.com">Go to facebook</a>       
+    </div>
+    <main>
+        <p>I am the paragraph 1</p>
+        <p>I am the paragraph 2</p>
+    </main>
+    reference video 
+    <br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/1cEG1T8beO4?si=XuTjOwsicDamvJED" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</body>
+</html>

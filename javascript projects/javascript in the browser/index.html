@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript loops</title>
+    <style>
+        ol>.list1 {
+            font-size: 30px;
+            font-weight: 600;
+        }
+
+        .container,
+        p {
+            font-size: 1.25rem;
+            margin: 20px;
+        }
+
+        .sp1 {
+            font-weight: 600;
+            color: red;
+            /* text-transform: capitalize; */
+        }
+
+        .list2 {
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+
+        .list {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>javascript arrays.</h1>
+    <div class="container">
+        arrays are the collection of multiple datatypes that can be number, strings, boolean etc.
+        <br>
+        arrays are variables that can hold more than one value.
+    </div>
+    <ol>
+        <li class="list1">arrays and accessing the values of the arrays.</li>
+        <div class="container">
+            arrays are made by declaring a variable and adding the multiple contents inside the square brackets ([
+            ]).
+            <br>
+            <b>to access the values of the arrays we hae to type the variable name </b>and then we have to enter the
+            number of the position at which that element is present.
+            <br>
+            <B>EXAMPLE::</B> arr[4]
+            <br>
+            <span class="sp1">NOTE :: the number of position starts from zero.</span>
+        </div>
+        <li class="list1">properties or functions in arrays.</li>
+        <ol class="list">
+            <li class="list2">finding the length of the arrays.</li>
+            <div class="container">
+                we have seen the functions of the javascript which are the built in functions.
+                <br>
+                <b>.length()</b> is the function and a property that is used to print the length of the array.
+                <br>
+                arr = [1,2,3,4,5,6]
+                <br>
+                console.log(arr.length)
+                <br>
+                <B>OUTPUT:: 6</B>
+            </div>
+            <li class="list2">changing the values of arrays.</li>
+            <div class="container">
+                we have seen the strings in the javascript but the problem is we cannot change the specific letter in
+                the string without using functions. <b>strings are immutable.</b>
+                <br>
+                but in the case of arrays we can change the specific element of an array by addressing it and changing
+                the value.
+                <b>arrays are mutable. (changable)</b>
+                <br>
+                <B>EXAMPLE:: arr[3] = 456.</B>
+            </div>
+        </ol>
+        <li class="list1">Array methods.</li>
+        <ol class="list">
+            <p>these are some important array methods which are used very commonly.
+                <br>
+                these are thr default functions in the javascript.
+                <br>
+                <span class="sp1">note: these all the functions are applied as follows:</span>
+            <p>
+                EXAMPLE: <B>console.log(arr.FunctionName())</B>
+                <BR>or
+                </BR><b> C = arr.FunctionName()</b>
+
+            </p>
+            </p>
+            <li class="list2">toString()</li>
+            <div class="container">
+                this function converts the array to the coma separated values.
+            </div>
+            <li class="list2">join("") or join()</li>
+            <div class="container">
+                this function is similar to the "ToString" function but this function separates the values of the arrays
+                from the thing entered in the brackets.
+            </div>
+            <li class="list2">pop()</li>
+            <div class="container">
+                this function Removes the last element from an array and returns it. If the array is empty, undefined is
+                returned and the array is not modified.
+            </div>
+            <li class="list2">push()</li>
+            <div class="container">
+                this adds the new element i nthe last of an array and returns the new length of an array.
+            </div>
+            <li class="list2">shift()</li>
+            <div class="container">
+                removes the first element and returns it.
+            </div>
+            <li class="list2">unshift()</li>
+            <div class="container">
+                adds new element in the beginning and returns the new array length.
+            </div>
+            <li class="list2">delete
+            <li>
+                <div class="container">
+                    deletes the given array from the position and returns (<1 empty item>)
+                </div>
+            <li class="list2">concat()</li>
+            <div class="container">
+                this function merges the arrays and returns the new merged array.
+                <p>EXAMPLE:</p>
+                <P>
+                <pre>a1 = [1,2,3]
+a2 = [4,5,6]
+a3 = [7,8,9]</pre>these are the arrays
+                <br>
+                console.log(a1.concat(a2,a3);) <br>
+                <b>OUTPUT:</b>
+                <pre>[1,2,3,4,5,6,7,8,9]</pre>
+                </P>
+            </div>
+            <li class="list2">sort()</li>
+            <div class="container">
+                this function is used to sort the array elements alphabetically or in numerically correct order.
+            </div>
+            <li class="list2">splice()</li>
+            <div class="container">
+                in this function we can remove the elements from the array and the length of the array will be modified
+                and it will return the removed elements.
+                <br>
+                <b>SYNTAX::</b>
+                <pre>a.splice(position fom where the elements should be removed, the number of elements to be removed,new-element1,new-element2)</pre>
+            </div>
+            <li class="list2">slice()</li>
+            <div class="container">
+                this function slices out the piece of an array by entering the position from where we have to slice the
+                array.
+            </div>
+            <li class="list2">reverse()</li>
+            <div class="container">
+                this function reverces the arrays positions.
+            </div>
+        </ol>
+        <li class="list1">looping through arrays.</li>
+        <p> arrays can be looped through using the classical javascript for loop or through some other methods discussed
+            below.</p>
+        <ol class="list">
+            <li class="list2">forEach loop</li>
+            <div class="container"> 
+                this loop used to print the every element present in the array and their index.
+                <p>syntax: </p>
+                <b><p><pre>arr = ["one", "two", "three","four","five"]
+arr.forEach(value, index, arr => {
+    console.log("this value is: ",value, index, arr)
+});</pre></p></b>
+            </div>
+            <li class="list2">forOf loop</li>
+            <div class="container">
+                this loop is used to print the singular array. it is used to get the values from an array.
+            </div>
+            <li class="list2">map()</li>
+            <div class="container">
+                we can make a new array by using the original array by writing the least line of code.
+                this function creates a new array by performing the given operation on each element of an array. 
+            </div>
+            <li class="list2">filter()</li>
+            <div class="container">
+                this function is the used to filter the arrays with respect to any given condition and then  print them.
+            </div>
+            <li class="list2">reduce method</li>
+            <div class="container">
+                using this method we can apply the functions made by us on the elements of an array and it will return the reduced value of the arrays.
+            </div>
+            <li class="list2">array.from </li>
+            <div class="container">
+                this funsction of js is used to take the array from the user on any html page and this function converts the entered value into an array. 
+                <P><b>EXAMPLE:: Array.from("yaseen")</b></P>
+
+            </div>
+        </ol>
+    </ol>
+    <script src="script.js"></script>
+</body>
+
+</html>

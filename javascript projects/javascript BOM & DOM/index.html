@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript in the browser</title>
+    <style>
+        ol>.list1 {
+            font-size: 30px;
+            font-weight: 600;
+        }
+
+        .container,
+        p {
+            font-size: 1.25rem;
+            margin: 20px;
+        }
+
+        .sp1 {
+            font-weight: 600;
+            color: red;
+            /* text-transform: capitalize; */
+        }
+
+        .list2 {
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+
+        .list {
+            margin-top: 20px;
+        }
+
+        table {
+            border: 2px solid black;
+        }
+
+        tbody td {
+            color: red;
+            padding: 10px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>javascript pracs, BOM, DOM</h1>
+    <ol>
+        <li class="list1">developer tools</li>
+        <div class="container">
+            <p>click here to open the notes : <a href="/Chapter 6.pdf" target="_blank">open PDF</a></p>
+            the developer tools in he browser can be accessed by pressing the <b>"f12"</b> in the browserser.
+            <br>
+            THAT OPENS :
+            <table border="2">
+                <thead>
+                    <tr>
+                        <td>&nbsp;&nbsp;&nbsp;elements&nbsp;&nbsp;</td>
+                        <td>&nbsp;&nbsp;&nbsp;console&nbsp;&nbsp;&nbsp;</td>
+                        <td>&nbsp;&nbsp;&nbsp;network&nbsp;&nbsp;&nbsp;</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>this contains all the HTML elements.</td>
+                        <td>this window contains all the errors and logs</td>
+                        <td>this window contains all the network requirements.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>we can also write javascript comments in the console.</p>
+        </div>
+        <li class="list1">the script tag</li>
+        <div class="container">
+            this tag is used to insert the insert the script of the page internally.
+            <br>
+            or the script can be atteched externally by giving the scource address of the script page.
+            <br>
+            the benifit of the separate script tag is that the browser will download the file and save ir in the cache
+            memory.
+        </div>
+        <li class="list1">console object method (console.(method-name))</li>
+        <div class="container">
+            <ol class="list">
+                <li class="list2">assert()</li>
+                <div class="container">
+                    this is used to assert a condition.
+                    <br>
+                    <p>The <b>.assert()</b> method in JavaScript is used for testing conditions in code, typically for
+                        debugging purposes. It checks whether a condition evaluates to true, and if it doesn't, it
+                        outputs an error message to the console. If the condition is true, nothing happens, and the code
+                        continues as normal.</p>
+                    <pre>a = 45
+b = 34
+console.assert(a>b, "the equation sucks O.O")</pre>
+                    <b><u>OUTPUT:</u></b>
+                    <pre>Assertion failed: the equation sucks O.O</pre>
+                    this meant this checks for the condition. if false then prints the output as assertion failed.
+                </div>
+                <li class="list2">.clear()</li>
+                <div class="container">
+                    this clears the console and it is used in the console.
+                </div>
+                <li class="list2">.log()</li>
+                <div class="container">
+                    prints the output on the screen.
+                </div>
+                <li class="list2">.table()</li>
+                <div class="container">
+
+                    console.table() is a method in JavaScript that allows you to display tabular data in a table format
+                    in the browser's console. It's useful for logging arrays, objects, or arrays of objects in a
+                    structured and easy-to-read way.
+                </div>
+                <li class="list2">.warn()</li>
+                <div class="container">
+                    this shows a warning in the browser.
+                </div>
+                <li class="list2">.error()</li>
+                <div class="container">
+                    this is used to display an error in the console.
+                </div>
+                <li class="list2">.info()</li>
+                <div class="container">
+                    this is used to display an additional info in the console.
+                </div>
+        </div>
+        <li class="list1">interaction</li>
+        <p>
+            these properties are not console related but these are used to interact with the user by showing the popup fro the top of the screen.
+        </p>
+        <div class="container">
+            <ol class="list">
+                <li class="list2">alert()</li>
+                <div class="container">
+                    this gives an alert popup.
+                </div>
+                <li class="list2">prompt()</li>
+                <div class="div">
+                    this is used to take the input from the user as a string.
+                </div>
+                <li class="list2">confirm()</li>
+                <div class="div">
+                    this is used to print a confirmation message and return the "true" value if the user clicks to <b>ok</b> and "false" vallue if the user clicks <b>cancel</b>
+                </div>
+            </ol>
+        </div>
+        <li class="list1">window object BOM & DOM</li>
+        <div class="container">
+            see this from the notes avilable.
+        </div>
+    </ol>
+    <script src="script.js"></script>
+</body>
+
+</html>

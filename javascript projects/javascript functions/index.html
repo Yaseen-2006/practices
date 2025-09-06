@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript functions</title>
+    <style>
+        ol>.list1 {
+            font-size: 30px;
+            font-weight: 600;
+        }
+
+        .container {
+            font-size: 1.25rem;
+            margin: 20px;
+        }
+
+        .sp1 {
+            font-weight: 600;
+            color: red;
+            /* text-transform: capitalize; */
+        }
+    </style>
+</head>
+<body>
+    <h1>javascript functions</h1>
+    <ol>
+        <li class="list1">simple functions</li>
+        <div class="container">
+            a function in javascript are the block of code designed to perform a particular task.
+            <br>
+            syntax of the function looks something like this::
+            <br>
+            <pre><b>function name(params (variable))
+                 {
+                    function body.
+            }
+            </b></pre>
+            <p>
+                <B>EXAMPLE::</B>
+                <pre><b>function naam(x, y, z) {
+                    console.log("mera naam " + x + " hai");    
+                    console.log("mera naam " + y + " hai");    
+                    console.log("mera naam " + z + " hai");    
+                }
+                
+                naam("yaseen", "umair", "uzair");</b></pre>
+                <B>OUTPUT::</B>
+                <pre><b>mera naam yaseen hai</b></pre>
+                <pre><b>mera naam umair hai</b></pre>
+                <pre><b>mera naam uzair hai</b></pre>
+            </p>
+        </div>
+        <li class="list1">function with parameters.</li>
+        <div class="container">
+            function <b>function name</b>(parameter 1, parameter 2) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//here the parameters behave as local variables. that are temporary.
+            <p>
+                <B>EXAMPLE::</B>
+                <pre><b>function sum(a, b){
+                    console.log(a + b);
+                }
+sum(34, 6);</b>     // calling the function</pre> 
+                now in this code the 34 will take the place of "a" and 6 will take the place of "b";
+            </p>
+            <p>
+                <B>OPTIONAL PARAMETERS:</B>
+                <br>
+                <br>
+                <span class="sp1">we can also predefine the any parameter while making the function this parameter will be optional so that if we enter the three numbers it will be stored in third variable but if we do not enter any of the number but we have predefined that parameter then the code of the function will use the predefine parameter of the function. </span>
+                <br>
+                <br>
+                <B>EXAMPLE::</B>
+                <pre><b>function addition(a = 3, b = 4 , c = 6) {
+                    console.log(a, b , c);
+                    console.log(a + b + c);
+                }
+                addition(34, 55, 30);</b></pre>
+                <br>
+                <B>OUTPUT:</B><br>
+                34 55 30 <br>
+                119
+                <br>
+                <br>
+                <b>OR:</b>
+                <br>
+                <pre><b>function addition(a = 3, b = 4 , c = 6) {
+                    console.log(a, b , c);
+                    console.log(a + b + c);
+                }
+                addition();</b></pre>
+                <B>OUTPUT:</B><br>
+                3 4 6
+                <br>
+13
+
+            </p>
+        </div>
+        <li class="list1">variable as a function.</li>
+        <div class="container">
+            we can make the function in a variable.
+            <br>
+            A function can also return a value that value is returned to the caller.
+            <br>            
+            <br>
+            <b>SYNTAX::</b>
+            <br>
+            <pre><b>const function name = ( a , b (these are variable names) ){
+                // function body  and declaring the new variable which is to be returned.
+                // return the declared variable. 
+                }
+            calling the function in a variable.
+            </b></pre>
+            <B>EXAMPLE:: </B>
+            <p>
+                <pre><b>const add = (a,b) =>{
+                    let c = a+b;
+                    return c;
+                }
+                
+                let y = add(36,4);
+                console.log(y);</b></pre>
+                <B>OUTPUT:</B>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;40
+                <br>
+                
+            </p>
+        </div>
+    </ol>
+</body>
+</html>

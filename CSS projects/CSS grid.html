@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS grid</title>
+    <style>
+        ol{           
+            font-size: 30px;
+        }
+        .div{
+            font-size: 0.7em;
+            padding: 20px;
+        }
+        .container1{
+            border: 2px solid red;
+            display: grid; 
+            grid-template-columns: 120px 100px;
+
+        }
+        .container2, .container3, .container4{
+            border: 2px solid red;
+            display: grid; 
+            grid-template-columns: 120px 100px;
+            grid-template-rows: 120px 100px 100px;
+
+        }
+        .item{
+            border: 1px solid rgb(0, 17, 255);
+            background-color:rgb(95, 105, 240);
+            height: 75px;           
+            width: 75px;   
+        }
+        .item4, .item6, .item9{
+                 grid-row: 1/2;
+                 grid-column: 1/2;
+            }
+            .temp{
+                border: 2px solid red;
+                display: grid; 
+                grid-template-areas: "nav nav nav" "area article article" "footer footer footer" "footer1 footer1 footer1";
+
+            }
+            .area{
+                border: 2px solid blue;
+            }
+            .area1{
+                grid-area: nav;
+
+            }
+            .area2{
+                grid-area: area;
+            }
+            .area3{
+                grid-area: article;
+            }
+            .area4{
+                grid-area: footer;
+            }
+            .area5{
+                grid-area: footer1 ;
+            }
+            .temp2{
+                border: 2px solid black;
+                display: grid;
+                grid-template-columns: 1fr 2fr 1fr;
+            }
+            .gap{
+                gap: 5px 15px;
+            }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CSS grid.</h1>
+    </header>
+    <main>
+        <ol>
+            <li>display: grid;</li>
+            <div class="div">
+                <b>CSS grid</b><u>: A grid is a collection of horizontal and vertical lines creating a pattern against which we can line up our design elements. They help us to create layouts in which our elements won't jump around or change width as we move from page to page, providing greater consistency on our websites.</u>
+                <ul>
+                    <li><b><u>grid-template-columns: 120px 100px;</u></b></li>
+                    now the grid has distributed in the two columns i.e 120 pixels and the 100 pixels.
+                    <br>
+                    usin the css grid we can align the content any item any where in the div.
+                    <br>
+                    <br>                    
+                    <div class="container1">
+                        <div class="item">1</div>
+                        <div class="item">2</div>
+                        <div class="item">3</div>
+                        <div class="item">4</div>
+                        <div class="item">5</div>
+                    </div>
+                    <br>
+                    <div>
+                        <figure>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/7AgEjgUtho4?si=kp9CtZulQTU_zYxa&amp;start=157" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </figure>
+                    </div> 
+                    <h3>CSS grid components</h3>
+                    <li><b><u>grid lines and grid cells.</u></b></li>
+                    each box is the grid cell just like the excel.
+                    <li><b><u>grid track.</u></b></li>
+                    the area between any of the two lines of the grid is the grid track.
+                    <br>
+                    <li><b><u>grid area.</u></b></li>
+                    the area between two vertical and two horizontal lines is called as grid area. 
+                    <br>
+                    <img src="https://www.zeninvader.com/2c35a6c0bf8f92e61a84ba900a6fa082/css-grid-components.gif" alt="">
+                    <li><b><u>grid template rows and columns.</u></b></li>
+                    we can put the different item in the same cell so that they can overlap. 
+                    <br>
+                    we can name the individual line in the CSS grid template.
+                    <br>
+                    <img src="https://hcdev.ru/css/grid-numbers.png" alt="">
+                    <img src="https://www.w3.org/TR/css-grid-1/images/grid-lines.png" alt="">
+                    <br>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/7AgEjgUtho4?si=15ciZfQIT2ARAv_R&amp;start=336" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <br>
+                    <b>we have seen the grid-template-columns above</b>
+                    <li><b><u>grig-template-rows:</u></b></li>
+                    with this we can decide the height of the rows in the CSS grid.
+                    <br>
+                    <!-- in this example the height is given to the elements but not the width therefore the width and height is getting adjusted according to the grid-template-columns and rows.  -->
+                    <div class="container2">
+                        <div class="item">1</div>
+                        <div class="item">2</div>
+                        <div class="item">3</div>
+                        <div class="item">4</div>
+                        <div class="item">5</div>
+                    </div>
+                    <br>
+
+                    <li><b><u>grid row and grid column property.</u></b></li>
+                    in this property we can position any element inside the div anywhere using the CSS grid.
+                    for example.::
+                    <br>
+                    <pre>
+                        <b>
+     .item4{
+                 grid-row: 1/2;
+                 grid-column: 1/2;
+            }
+                        </b>
+                    </pre>
+                    this means that this item will start from row 1 and end on row 2 resulting in the item defaultly placed on that position will be shifted forward in the direction of the grid as shown in the example.
+                    <div class="container3">
+                        <div class="item item1">1</div>
+                        <div class="item">2</div>
+                        <div class="item">3</div>
+                        <div class="item item4">4</div>
+                        <div class="item">5</div>
+                    </div>
+                    if we give the item 6 and item 9 same position these two items will overlap to each other.
+                    <br>
+                    <pre>
+                        <b>
+     .item9, .item6{
+                 grid-row: 1/2;
+                 grid-column: 1/2;
+            }
+                        </b>
+                    </pre>
+                    <div class="container4">
+                        <div class="item item6">6</div>
+                        <div class="item">7</div>
+                        <div class="item">8</div>
+                        <div class="item item9">9</div>
+                        <div class="item">10</div>
+                    </div>
+                    <br>
+                    <li><b><u>naming the grid lines.</u></b></li>
+                    we can name the lines of the grid it is don while giving the the width to grid template rows and columns.
+                    <br>example::
+                    <br>
+                    <b>grid-template-columns <!-- (naming the vertical lines)-->:[pehla] 120px [doosra] 100px [teesra]</b> 
+                    <br>
+                    <b>grid-template-rows<!-- (naming the horzontal lines)-->:[pehli] 120px [doosri] 100px [teesri]</b>
+                    <br>this means that first  line is named pehla (vertical) and pehli (horizontal)  second is doosra and doosri and third one is teesra and teesri.
+                    <br>
+                    <pre>
+                        <b>
+                            .item4{
+                                grid-row: pela/teesra;
+                                grid-column: pehla/doosra;
+                            }
+                        </b>
+                    </pre>
+                    in this example we want that the item 4 will take the from the width from line 1 to line 3 and take the height from line 1 to line 2 which has baeen named.
+                </div>                
+            </ul>
+            <li>grid type-2</li>
+            <div class="div">
+                the one more method to use the CSS is:
+                <ul>
+                    <li><b><u>grid-template-area:"name of the area."</u></b></li>
+                    in this preperty we assign a area and can give the name to that area then call that name in the individiual item to fit in that area. 
+                    <br>example::
+                     <div class="temp">
+                        <div class="area area1">1</div>
+                        <div class="area area2">2</div>
+                        <div class="area area3">3</div>
+                        <div class="area area4">4</div>
+                        <div class="area area5">5</div>
+                     </div>
+                     syntax of the above div :: 
+                     <pre>
+                        <b>
+        .temp{
+                border: 2px solid red;
+                display: grid; 
+                grid-template-areas: "nav nav nav" "area article article"footer footer footer";
+                
+        }
+        .area{
+                border: 2px solid blue;
+        }
+        .area1{
+                grid-area: nav;
+                
+        }
+        .area2{
+             grid-area: area;
+        }
+        .area3{
+                grid-area: article;
+        }
+        .area4{
+                grid-area: footer;
+        }
+        .area5{
+            grid-area: footer1 ;
+        }
+                        </b>
+                     </pre>
+                     <li><b><u>one more unit is fr unit:</u></b></li>
+                     in this unit the grid is devided in to the given fraction.
+                     i.e, 1:2:1. if given that <b>grid-template-columns: 1fr 2fr 1fr</b> <br>
+                     example::
+                     <br>
+                     <div class="temp2">
+                        <div class="area area6">1</div>
+                        <div class="area area7">2</div>
+                        <div class="area area8">3</div>
+                        <div class="area area9">4</div>
+                        <div class="area area10">5</div>
+                     </div>
+                     and the remaining items ill be shifted in the next row. as shown in the figure.
+                     <li><b><u>gap.</u></b></li> 
+                     this we have learned in the flexbox.
+                     row gap and column-gap. 
+                     example::
+                     <br>
+                     <div class="temp2 gap">
+                        <div class="area area6">1</div>
+                        <div class="area area7">2</div>
+                        <div class="area area8">3</div>
+                        <div class="area area9">4</div>
+                        <div class="area area10">5</div>
+                     </div>
+                     <br>
+                     <li><b><u>justify-item</u></b></li>
+                     this justifies the items in the given position in their respective cells. i.e,according to main axis.
+                     <br>
+                     <li><b><u>align-items</u></b></li>
+                     this aligns the items in the given position in their respective cells. i.e,according to cross axis. 
+                     <br>
+                     <li><b><u>justify-content</u></b></li>
+                     this justifies the whole grid in the given position in the div if the div is bigger. i.e,according to main axis.
+                     <br>
+                     <li><b><u>align-content</u></b></li>
+                     this alignes the whole grid in the given position in the div if the div is bigger. i.e,according to coss axis.
+                     <br>
+                     <b style="font-size: 2em;">and some more are theree in the grid the video will start. 👇</b>
+                     <br>
+                     <iframe width="560" height="315" src="https://www.youtube.com/embed/7AgEjgUtho4?si=761O73ly_iNnAW68&amp;start=1655" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </ul>
+            </div>
+        </ol>
+    </main>
+</body>
+</html>

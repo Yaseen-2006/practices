@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>searching the DOM in the javascript.</title>
+    <style>
+        ol>.list1 {
+            font-size: 30px;
+            font-weight: 600;
+        }
+
+        .container,
+        p {
+            font-size: 1.25rem;
+            margin: 20px;
+        }
+
+        .sp1 {
+            font-weight: 600;
+            color: red;
+            /* text-transform: capitalize; */
+        }
+
+        .list2 {
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+
+        .list {
+            margin-top: 20px;
+        }
+
+        table {
+            border: 2px solid black;
+        }
+
+        tbody td {
+            color: red;
+            padding: 10px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>searching the DOM & BOM</h1>
+    <p>we can search and select any element in javascript to manupulate with the original documents and style using the
+        javascript.</p>
+    <ol>
+        <li class="list1">document.body   [BOM model]</li>
+        <div class="container">
+            this property is used to select the body of the lements and in 👇these properties we can access the other
+            properties in present in the body.
+            <ol class="list">
+                <li class="list2">document.body.childNodes</li>
+                <div class="container">
+                    this is used to know all the present childrens in the body.
+                    <br>
+                    this property is the BOM (Browser Object Model.)
+                    this means this property works in the browser.
+                    <br>
+                    <p>
+                        that will display :
+                    <pre>NodeList(15) [text, div.box, text, div.box, text, div.box, text, div.box, text, div.box, text, div.box, text, script, text]</pre>
+                    </p>
+                    <p>the text at first is displayed because the box's div after the body tag is present and between
+                        them there is the sapace and <b>blank sapces are considered as text in the js</b></p>
+                </div>
+                <li class="list2">document.body.childNodes[the position of node]</li>
+                <div class="container">
+                    in the previouse <u>NodeList</u> in the square bracket the position start from 0,1,2,3,4,5 and so on.
+                    <br>
+                    in the bracket of <b>childnodes[ ]</b> if we enter the position of the node it will tell axactly which node is present at that particular position.
+                    <p>
+                        EXAMPLE:
+                        <pre>document.body.childNodes[1]</pre>
+                        it will select the div.box this this time.
+                    </p>
+                </div>
+                <li class="list2">document.body.childNodes[1].childNodes</li>
+                <div class="container">
+                    this will show the childnodes present in the container.
+                    <br>
+                    the spaces are considered as text.
+                </div>
+                <li class="list2">first and last child</li>
+                <div class="container">
+                    similarly from the above we can select the first and the last child.
+                </div>
+                <li class="list2">first and last element child.</li>
+                <div class="container">
+                    this ignores the text nodes that are the alternate childrens of any container.
+                    <p>
+                        EXAMPLE:
+                            <pre>document.body.childNodes[1].firstElementChild</pre>
+                            this will select the first element present in the selected container.
+                    </p>
+                </div>
+                <li class="list2">parent Element</li>
+                <div class="container">
+                    we can also know the parent of the selected element.
+                    <img src="https://miro.medium.com/v2/resize:fit:950/0*Sk5AAj4ze_bDFPA0.png" alt="DOM tree" width="550">
+                    <p>as we select the element in the DOM we are navigating in the DOM tree and knowing the parent of the tree simply means to go up in the DOM tree</p>
+                    <p>
+                        EXAMPLE:
+                        <PRE>document.body.childNodes[1].lastElementChild.parentElement.</PRE>
+                    </p>
+                    <li class="list2">element sibling.</li>
+                    <div class="container">
+                        whose parents are same they are called as the siblings.
+                        <br>
+                        we can access the next and previouse sibling of the selected element which itself is an element.
+                        <p>if we don't use ElementSibling instead we use the previouseSibling it will return text.</p>
+                        <pre>document.body.childNodes[1].firstElementChild.nextElementSibling</pre>
+                    </div>
+                </div>
+                <p>these all preperties also include the comment nodes but the comment is not the tex or element node it can only be accessed by manually deriving the location from the DOM tree.</p>
+                <span class="sp1">NOTE: we can also manupulate with the styles by doing <b><u>document.body.childNodes[1].lastElementChild.style.backgroundcolor = 'blue'</u></b></span>
+            </ol>
+        </div>
+        <li class="list1">targetting the table elements.</li>
+        <div class="container">
+            we can target the table elements :
+            <ol class="list">
+                <li class="list2">rows</li>
+                we can access the rows of the by :
+                <P>
+                    EXAMPLE:
+                    <pre></pre>
+                </P>
+            </ol>
+        </div>
+        <li class="list1">BOM as variables</li>
+        <div class="container">
+            all the above BOM models can be stored in a variable.
+            <pre>let a = documnet.body.childNodes[1].childNodes[3]</pre>
+        </div>
+        <li class="list1">selectors in javascript (searching the DOM)</li>
+        <div class="container">
+            <p>
+                the above DOM model can work very efficiently when we need to select the elements in the same div or access the multiple elements of the same parent.
+            </p>
+            <ol class="list">
+                <li class="list2">getElelementByClassName</li>
+                <div class="container">
+                    this property used to select the lements by entering the name of their class. 
+                    <br>
+                    this function direcltly selects the elements containing the given class-name.
+                    <br>
+                    in this we have to select the specific element by entering the position of the element in the class.
+                    <p>
+                        EXAMPLE:
+                        <PRE>let box = document.getElementsByClassName("box")
+box[3].style.backgroundColor = 'grey'</PRE>
+                    </p>
+                    <p>
+                        but if we insert the new element containing the same class the property will be applied on the position of the element not on the specific element.
+                    </p>
+                    <li class="list2">getElelementById</li>
+                    <div class="container">
+                        this function selects the specific element containing the given Id.
+                        <br>
+                        because the id is given to a specific element.
+                        <br>
+                        in this we don't have to enetr the position of the element beacause by default it is the singular Element on which the peoperty will be applied.
+                        <p>
+                            EXAMPLE:
+                            <pre>let box = document.getElementById("box3")
+box.style.backgroundColor = "purple"
+box.style.color= "white"</pre>
+                        </p>
+                    </div>
+                    <li class="list2">elem.queryselector(selector)</li>
+                    <div class="container">
+                        this returns the first element of the given selector.
+                    </div>
+                    <li class="list2">queryselectorAll(selector)</li>
+                    <div class="container">
+                        this returns all the elements inside the given CSS selector.
+                    </div>
+                    <li class="list2">getElelementByName(attribute name)</li>
+                    <div class="container">
+                        this selects all the elements having the given attribute name.
+                    </div>
+                </div>
+                <li class="list1">other methods.</li>
+                <p>
+                    mathches , closest & contains method.
+                </p>
+                <ol class="list">
+                    <li class="list2">mathces()</li>
+                    <div class="container">
+                        elem.matches(css) - this checks weather the given CSS selector matches selcted one.
+                    </div>
+                    <li class="list2">closest()</li>
+                    <div class="container">
+                        this checks for the closest ancestorthat matches the  given css selector. the element itself is also cheched.
+                    </div>
+                    <li class="list2">contains()</li>
+                    <div class="container">
+                        this checks weather the selected element contains the given element. returns true if the element a contaons element b.
+                    </div>
+                </ol>
+            </ol>
+        </div>
+    </ol>
+    <!-- <script src="script.js"></script> -->
+</body>
+
+</html>

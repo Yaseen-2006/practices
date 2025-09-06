@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>excercise 7-layout design using grid</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI';
+        }
+
+        li {
+            text-transform: capitalize;
+            list-style-type: none;
+        }
+
+        header {
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+        }
+
+        nav {
+        color: black;
+            display: flex;
+            gap: 50px;
+            flex-wrap: wrap;
+            margin-right: 15vw;
+        }
+        .logo{
+            margin-left: 15vw;
+        }
+        header nav li{
+            align-content: center;
+            cursor: pointer;
+        }
+        .arrow{
+            padding-left: 5px;
+        }
+    </style>
+    <style>
+        @media  only screen and (max-width: 970px) {
+    
+          .divbody{
+            /* display: flex; !important
+            flex-wrap: wrap; !important */
+            display: grid; 
+            grid-template-columns: 1fr 1fr 0fr; 
+          }  
+        } 
+        *{
+            font-family: 'Segoe UI';
+        }
+        .head{
+            font-size: 48px;
+        }
+        .content{
+            grid-column: 2/3;
+            text-align: center;
+            /* width: 50vw; */
+            margin-top: 120px;
+        }
+        main{
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            /* display: flex;
+            justify-content: center; */
+        }
+        .desc{
+            font-size: 24px;
+            margin: 50px 0px;
+        }
+        .button button{
+            background-color: #00b6d1;
+            color: #fff;
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            padding: 12px 20px;
+            border-radius: 5px;
+            margin-bottom: 70px
+        }
+        .button button:hover{
+            background-color: #178697;
+            color: #fff;
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            padding: 12px 20px;
+            border-radius: 5px;
+        }
+        .maincontent{
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;            
+        }
+        .divhead{
+            grid-column: 2/3;
+            /* padding: 50px; */
+        }
+        .maincontent span .sp1{
+            font-size: 24px;
+            padding-bottom: 10px;
+        }
+        .maincontent span {
+            padding-left: 10px;
+            /* font-size: 24px;
+            padding-bottom: 10px; */
+        }
+        .divhead{
+            /* grid-area: 2/3; */
+            display: flex;           
+           align-items: center;
+           justify-content: center;           
+        }
+        .sp2{
+            font-size: 14.4px;
+        }
+        .divbody{
+            box-sizing: border-box;
+            gap: 20px 40px;
+            padding: 20px;
+            justify-content: center;
+            display: grid;
+            grid-template-columns: 302px 302px 302px;
+        }
+        .boxes{
+            background-color: #f9f9f9;
+            max-width: 302px;
+            padding: 16px;
+            border-radius: 5px;
+            align-self: center;
+            justify-self: center;
+            text-align: center;
+            overflow-wrap: break-word;
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+            /* margin: 20px; */
+        }
+        .boxes .sp4{
+            font-weight: 700;
+            font-size: 20px;
+        }
+        .boxes .download{
+            background-color: #5cb85c;
+            border: none;
+            font-size: 12px;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: 600;
+            color: #ffffff;
+            cursor: pointer;
+            margin: 10px 0px 0px;
+        }
+        .boxes .sp3{
+            font-size: 12px;
+        }
+        .boxes p{
+            font-size: 8px;
+            color: #222222;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <img class="logo" src="logo removed background.png" alt="logo">
+        <nav>
+            <li>products <img src="https://www.iconpacks.net/icons/2/free-arrow-down-icon-3101-thumb.png" alt="" class="arrow" width="12"></li>
+            <li>for business <img src="https://www.iconpacks.net/icons/2/free-arrow-down-icon-3101-thumb.png" alt="" class="arrow" width="12"></li>
+            <li>resources <img src="https://www.iconpacks.net/icons/2/free-arrow-down-icon-3101-thumb.png" alt="" class="arrow" width="12"></li>
+            <li>support <img src="https://www.iconpacks.net/icons/2/free-arrow-down-icon-3101-thumb.png" alt="" class="arrow" width="12"></li>
+            <li>our company <img src="https://www.iconpacks.net/icons/2/free-arrow-down-icon-3101-thumb.png" alt="" class="arrow" width="12"></li>
+            <li><img src="https://www.svgrepo.com/show/371958/language.svg" alt="" width="30"></li>
+            <li><img src="https://img.icons8.com/?size=256&id=43719&format=png" alt="" width="25"></li>
+        </nav>
+    </header>
+    <main>
+        <div class="content">
+            <div class="head">
+                Download <b>UltraEdit</b> for Windows <img src="https://www.ultraedit.com/wp-content/uploads/2022/10/Reviews.png" alt="">
+            </div>
+            <div class="desc">
+                Download and try UltraEdit before you buy it! This download includes the full Windows version of the text editor. 
+            </div>
+            <div class="button">
+                <a href="ue_english_64.exe"><button>Download Mac or Linux version</button></a>
+            </div>
+        </main>
+        </div>
+        <div class="maincontent">
+            <div class="divhead">
+                <img class="image" src="https://www.ultraedit.com/wp-content/uploads/2023/01/UE_logo_icon_white.png" alt="" width="60">
+                <span><span class="sp1">Download UltraEdit</span><span class="sp2">v2024.1(released 2024-08-27) | Hotfix information (2024-08-18)</span></span>
+            </div>
+        </div>
+        <div class="divbody">
+            <div class="boxes">
+                <span class="sp4">English</span>
+                <span></span>
+                <a href="ue_english_64.exe"><button class="download">
+                    Download 64-bit
+                </button></a>
+                <p>SHA256
+                    Copied to clipboard
+                    3C783C0872319DE70343C2C79D9E0024FDA3F1DB472B8F1119343D42190AAD8C</p>
+            </div>
+            <div class="boxes"><span class="sp4">Deutsch</span> <span class="sp3">
+                German 
+            </span>
+            <a href="ue_english_64.exe"><button class="download">
+                Download 64-bit
+            </button></a>
+            <p>SHA256
+                Copied to clipboard
+                3C783C0872319DE70343C2C79D9E0024FDA3F1DB472B8F1119343D42190AAD8C</p>
+        </div>
+            <div class="boxes"><span class="sp4">Italiano</span> <span class="sp3">
+                Italian
+            </span>
+            <a href="ue_english_64.exe"><button class="download">
+                Download 64-bit
+            </button></a>
+            <p>SHA256
+                Copied to clipboard
+                3C783C0872319DE70343C2C79D9E0024FDA3F1DB472B8F1119343D42190AAD8C</p>
+        </div>
+            <div class="boxes"><span class="sp4">Español</span> <span class="sp3">
+                Spanish
+            </span>
+            <a href="ue_english_64.exe"><button class="download">
+                Download 64-bit
+            </button></a>
+            <p>SHA256
+                Copied to clipboard
+                3C783C0872319DE70343C2C79D9E0024FDA3F1DB472B8F1119343D42190AAD8C</p>
+        </div>
+            <div class="boxes"><span class="sp4">français</span> <span class="sp3">
+                French
+            </span> 
+            <a href="ue_english_64.exe"><button class="download">
+                Download 64-bit
+            </button></a>
+            <p>SHA256
+                Copied to clipboard
+                3C783C0872319DE70343C2C79D9E0024FDA3F1DB472B8F1119343D42190AAD8C</p>
+        </div>
+            <div class="boxes"><span class="sp4">Português brasileiro</span> <span class="sp3">Brazilian Portuguese</span>
+                <a href="ue_english_64.exe"><button class="download">
+                    Download 64-bit
+                </button></a>
+                <p>SHA256
+                    Copied to clipboard
+                    3C783C0872319DE70343C2C79D9E0024FDA3F1DB472B8F1119343D42190AAD8C</p>
+            </div>
+            <div class="boxes"><span class="sp4">日本</span> <span class="sp3">
+                Japanese
+            </span>
+            <a href="ue_english_64.exe"><button class="download">
+                Download 64-bit
+            </button></a>
+            <p>SHA256
+                Copied to clipboard
+                3C783C0872319DE70343C2C79D9E0024FDA3F1DB472B8F1119343D42190AAD8C</p>
+        </div>
+            <div class="boxes"><span class="sp4">한국어</span> <span class="sp3">Korean</span><a href="ue_english_64.exe"><button class="download">
+                Download 64-bit
+            </button></a>
+            <p>SHA256
+                Copied to clipboard
+                3C783C0872319DE70343C2C79D9E0024FDA3F1DB472B8F1119343D42190AAD8C</p></div>
+            <div class="boxes"><span class="sp4">中国</span> <span class="sp3">Chinese</span>
+                <a href="ue_english_64.exe"><button class="download">
+                    Download 64-bit
+                </button></a>
+                <p>SHA256
+                    Copied to clipboard
+                    3C783C0872319DE70343C2C79D9E0024FDA3F1DB472B8F1119343D42190AAD8C</p>
+            </div>
+            <div class="boxes"><span class="sp4">中國</span> <span class="sp3">Traditional Chinese</span>
+                <a href="ue_english_64.exe"><button class="download">
+                    Download 64-bit
+                </button></a>
+                <p>SHA256
+                    Copied to clipboard
+                    3C783C0872319DE70343C2C79D9E0024FDA3F1DB472B8F1119343D42190AAD8C</p>
+            </div>
+        </div>
+</body>
+</html>

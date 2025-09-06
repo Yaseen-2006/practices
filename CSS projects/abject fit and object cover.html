@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object-fit and abject-cover properties</title>
+    <link rel="stylesheet" href="objectfitstyle.css">
+</head>
+
+<body>
+    <h1>Object-fit and Objet-position</h1>
+    <p class="sp1">these all the properties are related to the images and background images.
+        <br>
+        how can we fit that picture in the particular box without ruining it's aspect ratio.
+    </p>
+    <ol>
+        <li class="list">object-fit</li>
+        <ul class="sublist">the default value of the object-fit property is <b><u>fill.</u></b></ul>
+        <ul class="sublist">
+            <li>object-fit: <span class="sp2">cover</span>;</li>
+            <div class="div">
+                this property will fit the image in the given width and height whicch is given to the image <b>while
+                    mantaining the aspect ratio of the image.</b>
+                <br>
+                <br>
+                EXAMPLE::
+                <div class="container">
+                    <img class="img2"
+                        src="https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+                        alt="">
+                </div>
+                <h3>in the above picture the aspect ratio is ruined but in this picture the object-fit: cover property
+                    is applied that's why the image is containing it's aspect ratio but the surrounding of the picture
+                    is croped. </h3>
+                <h4>SYNTAX::
+                    <pre>.img1{
+            width: 422px;
+            height: 422px;
+            object-fit: cover;
+                }</pre>
+                    note:: the width and height of the parent div doesn't affect this property.
+                </h4>
+                <div class="container">
+                    <img class="img1"
+                        src="https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+                        alt="">
+                </div>
+            </div>
+            <br>
+            <li>object-fit: <span class="sp2">contain</span>;</li>
+            <div class="div">
+                in this property the <b>full image</b> will be shown in the given width and height even if the given
+                width and height is not fully acquired by the image.
+                <br>
+                EXAMPLE::
+                <div class="container">
+                    <img src="https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+                        alt="" class="img3">
+                </div>
+            </div>
+            <br>
+        </ul>
+        <li class="list">object-positon.</li>
+        <h2>this property is applied if the property <u>object-fit: cover;</u> is applied and after that because this
+            property is directly related to <u>object-fit</u> property.</h2>
+        <ul class="sublist">
+            <li>object-positon: <span class="sp2">top right, bottom right, top left, bottom left, center.</span></li>
+            <div class="div">
+                in this property the given values only are executed. which means only the described portion of the image
+                will be seen if the property <b>object-fit: cover</b> is applied.
+                <p>this have possible values: top right, bottom right, top left, bottom left and center.</p>
+                <div class="container">
+                    <img src="https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+                        alt="" class="img4">
+                </div>
+                <div class="container">
+                    <img src="https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+                        alt="" class="img5">
+                </div>
+                <div class="container">
+                    <img src="https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+                        alt="" class="img6">
+                </div>
+            </div>
+            <li>object-position: <span class="sp2">(value in px from top) (value in px from left);</span></li>
+            <div class="div">
+                this property value makes the distance between the image and it's given width and height from the top
+                and left <b>(for bottom and right we have to give the value in negatives.)</b>
+                <p>EXAMPLE::</p>
+                <div class="container">
+                    <img src="https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+                        alt="" class="img7">
+                </div>
+                <p>SYNATX::</p>
+                <B>
+                    <PRE>.img7{
+                    width: 322px;
+                    height: 422px;
+                    object-fit: cover;
+                    object-position: 12px 24px;
+                }</PRE>
+                </B>
+                <div class="container">
+                    <img src="https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+                        alt="" class="img8">
+                </div>
+                <p>SYNATX::</p>
+                <B>
+                    <PRE>.img7{
+                    width: 322px;
+                    height: 422px;
+                    object-fit: contain;
+                    object-position: 12px 24px;
+                }</PRE>
+                </B>
+            </div>
+            <li>object-position: <span class="sp2">(value in %)(value in %);</span></li>
+            <div class="div">
+                also we can enter the values in % to make the same changes as above.
+                <div class="container">
+                    <img src="https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+                        alt="" class="img9">
+                </div>
+                <p>SYNTAX::</p>
+                <b>
+                    <pre>.img9{
+                    width: 322px;
+                    height: 422px;
+                    object-fit: cover;
+                    object-position: 12% 5%;
+                }</pre>
+                </b>
+            </div>
+        </ul>
+    </ol>
+    <h1>backgroung-image properties</h1>
+    <p class="sp1">all the properties below are the properties of image which is in the background.</p>
+    <p class="sp1">all the above properties are applied in the img's style but these all properties will be applied in
+        the container's styles.</p>
+    <ol>
+        <li class="list">background-image: url(url of the image);</li>
+        <ul class="sublist">
+            by pasting the url of the image that image will be applied as background-image of that container.
+            <p>EXAMPLE::</p>
+            <div class="container2">
+                in this example the height and width is not defined in the styles that's why the image is not shown
+                properly.
+            </div>
+        </ul>
+        <li class="list">background-size.</li>
+        <ul class="sublist">
+            <li>background-size: <span class="sp2">(sizing units such as 1px, 1vh, 1vw, 1% for height) (sizing units
+                    such as 1px, 1vh, 1vw, 1% for width)</span></li>
+            <div class="div">
+                using this property we can resize the background image so that it looks good but the aspect ratio will
+                be ruined.
+            </div>
+            <P>EXAMPLE::</P>
+            <div class="container3">
+                syntax::
+                <b>
+                    <pre>.container3 {
+height: 422px;
+width: 422px;
+margin: 10px;
+border: 2px solid black;
+color: black;
+background-size: 100% 100%;
+ background-image: url(https://plus.unsplash.cpremium_photo-1664474619075-644dd191935f?fm=jpg&q=60&w=3000&ixlib=rb-4.0ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2V8ZW58MHx8MHx8fDA%3D;)           
+        }</pre>
+                </b>
+            </div>
+            <br>
+            <li>background-size: <span class="sp2">cover, contain;</span></li>
+            <div class="div">
+                this backround property is of <b><u>object-fit</u></b> using this property we can align the image in the
+                background without ruining it's aspect ratio.
+            </div>
+            <p>EXAMPLE::</p>
+            <div class="container4">
+                syntax::
+                <pre><b>.container4{
+    height: 422px;
+    margin: 10px;
+    border: 2px solid black;
+    color: black;
+    background-size: cover;
+    background-image: url(https://plus.unsplash    premium_photo-1664474619075-644dd191935f?fm=jpg&q=60&w=     ixlib=rb-4ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2V8ZW58MHx8MHx8fD) 
+    }</b></pre>
+            </div>
+        </ul>
+        <li class="list">background-position.</li>
+        <p class="sp1">this background property is similar to the <b><u>object-position</u></b> this property consists
+            all the values of object-position.
+            <br>
+            i.e: <b> top right, bottom right, top left, bottom left, center.</b>
+            <br>
+            these properties will be applied in the background-picture.
+        </p>
+        <ul class="sublist">
+            <li>background-position: <span class="sp2">top right</span></li>
+            <div class="div">
+                this property will make the top-right part of the background image to appear.
+            </div>
+            <p>EXAMPLE::</p>
+            <div class="container5">
+
+            </div>
+            <li>background-position: <span class="sp2">top left</span></li>
+            <div class="div">
+                this property will make the top-left part of the background image to appear.
+            </div>
+            <p>EXAMPLE::</p>
+            <div class="container6">
+
+            </div>
+            <li>background-position: <span class="sp2">center center</span></li>
+            <div class="div">
+                this property will make the center part of the background image to appear.
+            </div>
+            <p>EXAMPLE::</p>
+            <div class="container7">
+
+            </div>
+        </ul>
+        <li class="list">background-repeat.</li>
+        <p class="sp1">
+            if the picture is smaller than the width and height of the div then the background picture will repeat
+            itself and we can assign that the direction to which it will repeat itself using this property.
+        </p>
+        <ul class="sublist">
+            <li>background-repeat: <span class="sp2">no-repeat</span></li>
+            <div class="div">
+                If the image small then the rendered size of the picture will not properly cover the whole container. to
+                overcome this problem the image will repeat itselt from X and Y axes.
+                <br>
+                <b>If we don't want to apply this property we use <u>background-repeat: no-repeat;</u></b>
+                <br>
+                this will make the picture to not repeat itselt in the background.
+                <p>EXAMPLE:: before</p>
+                <div class="container9">
+
+                </div>
+                <p>EXAMPLE:: after</p>
+                <div class="container8">
+
+                </div>
+            </div>
+            <br>
+            <li>background-repeat: <span class="sp2">repeat-x</span></li>
+            <div class="div">
+                If the image is small then this property will repeat the image in only x-direction.
+                <p>EXAMPLE::</p>
+                <div class="container10">
+
+                </div>
+            </div>
+            <li>background-repeat: <span class="sp2">repeat-y</span></li>
+            <div class="div">
+                If the image is small then this property will repeat the image in only y-direction.
+                <p>EXAMPLE::</p>
+                <div class="container11">
+
+                </div>
+            </div>
+        </ul>
+        <li class="list">background-clip.</li>
+        <ul class="sublist">
+            <li>background-clip: <span class="sp2">border-box </span>;</li>
+            <div class="div">
+                this property is applied by default this will apply the background in the whole div without taking the padding in the account.
+                <p>EXAMPLE::</p>
+                <div class="container12">
+                    <div class="sp3">this is example.</div>
+                </div>
+            </div>
+            <br>
+            <li>background-clip: <span class="sp2">padding-box;</span></li>
+            <div class="div">
+                this property will be applied if the padding is given in the div.
+                <br>
+                then the background will only apply on the main content without covering the padding applied area.
+                <p>EXAMPLE:: in this example the empty area is the border and the black line above it is the outline.</p>
+                <div class="container13">
+                    <span class="sp3">this is example.</span>
+                </div>
+                <p>i don't know why this property is not getting applied.....</p>
+            </div>
+            <li>background-clip: <span class="sp2">content-box;</span></li>
+            <div class="div">
+                this property will apply on the the area only which the content aquires.
+                <p>EXAMPLE::</p>
+                <div class="container14">
+                    <span class="sp3">this is example.</span>
+                </div>
+            </div>
+            <br>
+            <li>background-clip: <span class="sp2">text</span></li>
+            <div class="div">
+                this property will apply on the text only the only area acquired by the text to apply this property we have to make the color of the text transparent.
+                <p>EXAMPLE::</p>
+                <div class="container15">
+                    <span class="sp4">this is example.</span>
+                </div>
+            </div>
+        </ul>
+    </ol>
+
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new page in HTML</title>
+</head>
+<body>
+    <h1>Comprehensive Form Example</h1>
+    <form action="/submit-form-action" method="post">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <div>
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+            </div>
+            <br>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <br>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter a secure password" required>
+            </div>
+            <br>
+            <div>
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob">
+            </div>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Gender</legend>
+            <div>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+            </div>
+            <div>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+            </div>
+            <div>
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label>
+            </div>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Your Interests</legend>
+            <div>
+                <input type="checkbox" id="coding" name="interests" value="coding">
+                <label for="coding">Coding</label>
+            </div>
+            <div>
+                <input type="checkbox" id="reading" name="interests" value="reading">
+                <label for="reading">Reading</label>
+            </div>
+            <div>
+                <input type="checkbox" id="sports" name="interests" value="sports">
+                <label for="sports">Sports</label>
+            </div>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Additional Details</legend>
+            <div>
+                <label for="country">Country:</label>
+                <select id="country" name="country">
+                    <option value="">--Please choose a country--</option>
+                    <option value="india">India</option>
+                    <option value="usa">United States</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="canada">Canada</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <label for="comments">Comments:</label><br>
+                <textarea id="comments" name="comments" rows="5" cols="50" placeholder="Leave your comments here..."></textarea>
+            </div>
+            <br>
+            <div>
+                <label for="profilePic">Upload Profile Picture:</label>
+                <input type="file" id="profilePic" name="profilePic" accept="image/*">
+            </div>
+        </fieldset>
+        <br>
+        <div>
+            <button type="submit">Submit Form</button>
+            <button type="reset">Reset Form</button>
+        </div>
+    </form>
+</body>
+</html>

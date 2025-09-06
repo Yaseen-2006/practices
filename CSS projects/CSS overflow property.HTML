@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS overflow property</title>
+    <style>
+        .box1{
+            font-size: larger;
+            
+        }
+        .box2{
+            margin: 20px ;
+            border: 2px solid ;
+            width: 25vw;
+            height: 10vw;
+            overflow: scroll;
+        }
+        .box3{
+            margin: 20px;
+            border: 2px solid ;
+            width: 25vw;
+            height: 10vw;
+            overflow: auto;
+        }
+        .box4{
+            margin: 20px;
+            border: 2px solid ;
+            width: 25vw;
+            height: 20vw;
+            overflow: auto;
+            white-space: nowrap;
+        }
+        .box5{
+            margin: 20px;
+            border: 2px solid ;
+            width: 25vw;
+            height: 20vw;
+            overflow: auto;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            display: inline-block;
+
+        }
+        .box6{
+            margin: 20px;
+            border: 2px solid ;
+            width: 25vw;
+            height: 20vw;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            display: inline-block;
+        }
+        .box7{
+            margin: 20px;
+            border: 2px solid ;
+            width: 25vw;
+            height: 20vw;
+            overflow: scroll;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            display: inline-block;
+        }
+        .box8{
+            margin: 20px;
+            border: 2px solid ;
+            width: 25vw;
+            height: 10vw;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            
+        }
+        .box9{
+            margin: 20px;
+            border: 2px solid ;
+            width: 25vw;
+            height: 10vw;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            
+        }
+        .box10{
+            margin: 20px;
+            border: 2px solid ;
+            width: 25vw;
+            height: 10vw;
+            overflow: hidden auto;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS overflow property</h1>
+    <div class="box1">
+        <ol>
+            <li>overflow: scroll;
+                <br><b>adds a scroll bar even the text is not overflowing the box-</b>
+                <br>
+                <div class="box2">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed a, iusto ea architecto sequi accusantium non voluptates dicta cum facilis ipsa aspernatur quasi error alias repudiandae vero suscipit corrupti doloribus temporibus totam repellat expedita! Eligendi deserunt eaque reprehenderit possimus. Reiciendis fugiat, suscipit maiores dolore nam distinctio quisquam officiis ullam alias dignissimos. Asperiores amet qui dolore voluptatibus consectetur, hic eveniet repudiandae doloremque reiciendis velit. Et delectus repellat accusantium. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis quia autem laudantium soluta beatae harum repudiandae quas sapiente consectetur temporibus.
+                </div>
+            </li>
+            <li>overflow: auto;
+                <br><b>adds the scroll bar only if the text overflows the box.</b>
+                <br>
+                <div class="box3">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, illo illum? Ullam cupiditate, ad dignissimos aperiam, deserunt itaque totam optio neque ducimus error inventore quas ratione accusamus alias iusto laborum id accusantium, similique dolore et aut ut doloribus vitae quo. Cupiditate unde nostrum sequi perspiciatis dolor debitis! Vero at repellat suscipit expedita et! Amet aperiam molestiae architecto, praesentium dolor deleniti iusto ab voluptatem enim explicabo aspernatur dolores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas placeat, consequuntur dolorum itaque amet suscipit vel excepturi porro rerum eligendi!
+                </div>
+            </li>
+            <li>white-space: nowrap; 
+                <br><b>doesnt break the line even the text overflows from the box.</b>
+                <div class="box4">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam exercitationem in quis officiis dicta earum maxime, ullam voluptas eaque saepe, ipsa sed nemo autem blanditiis, expedita fugit est iure alias animi. Sed ut beatae eligendi quidem, nemo cupiditate aliquam mollitia veniam doloremque quo. Laboriosam laudantium, aut amet nihil vitae voluptates, vero nemo eligendi velit labore aliquam! Soluta similique impedit aperiam quam, dignissimos maxime fuga vel neque illo laboriosam voluptatibus accusantium officiis. Rerum excepturi voluptates impedit, illum itaque possimus asperiores adipisci!
+                </div>
+            </li>
+            <li>
+                text-overflow: ellipsis; + white-body: nowrap; + overflow: hidden or auto or scroll;  
+                <br><b>doesnt break the line even the text overflows from the box. and adds the dots instead of overflowing the text.</b>
+                <br>
+                <div class="box5">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis ea ullam consequuntur at aut commodi nisi repellat ex aperiam numquam expedita qui, necessitatibus possimus! Excepturi placeat minus, velit nemo, expedita ex est perferendis officia incidunt provident assumenda ab facere possimus non esse omnis nobis autem libero nihil. Eum eligendi tenetur at ea adipisci perspiciatis exercitationem modi unde, fugiat reprehenderit, neque itaque debitis cupiditate, saepe quia soluta sequi voluptatibus quidem! Laboriosam ipsum aliquam voluptate cumque aut numquam magnam maiores blanditiis ab?
+                    <br><br><br>overflow: auto;
+                </div>
+                <div class="box6">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis ea ullam consequuntur at aut commodi nisi repellat ex aperiam numquam expedita qui, necessitatibus possimus! Excepturi placeat minus, velit nemo, expedita ex est perferendis officia incidunt provident assumenda ab facere possimus non esse omnis nobis autem libero nihil. Eum eligendi tenetur at ea adipisci perspiciatis exercitationem modi unde, fugiat reprehenderit, neque itaque debitis cupiditate, saepe quia soluta sequi voluptatibus quidem! Laboriosam ipsum aliquam voluptate cumque aut numquam magnam maiores blanditiis ab?
+                    <br><br><br>overflow: hidden;
+                </div>
+                <div class="box7">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis ea ullam consequuntur at aut commodi nisi repellat ex aperiam numquam expedita qui, necessitatibus possimus! Excepturi placeat minus, velit nemo, expedita ex est perferendis officia incidunt provident assumenda ab facere possimus non esse omnis nobis autem libero nihil. Eum eligendi tenetur at ea adipisci perspiciatis exercitationem modi unde, fugiat reprehenderit, neque itaque debitis cupiditate, saepe quia soluta sequi voluptatibus quidem! Laboriosam ipsum aliquam voluptate cumque aut numquam magnam maiores blanditiis ab?
+                    <br><br><br>overflow: scroll;
+                </div>
+            </li>
+            <li>
+                overflow-x & y: value;
+                <br><b>we can control the overflowing property of the content inbside the box on x & y axes individually. <br> example:: <br></b> overflow-x: hidden; overflow-y: scroll; <br>
+                <div class="box8">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate hic rerum, architecto veniam nam repellat sint quasi. Quo laboriosam rem consequatur facilis non similique velit sed inventore consequuntur minus pariatur necessitatibus, magni optio qui fugiat veritatis quod porro, libero asperiores explicabo debitis temporibus! Magnam, sapiente. Suscipit, libero. Quibusdam alias quis repellendus debitis? Laborum fugit dignissimos, nesciunt ab soluta, dolorem voluptates quae non corporis accusamus porro distinctio repudiandae illum eius reprehenderit culpa at. Officiis nam dolore et aut eveniet, necessitatibus iusto.
+                </div>
+                <br>
+                now overflow-y: hidden; and overflow-x: scroll;
+                <div class="box9">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt esse illum consequatur tempora porro iste nemo dolor, corporis quo modi tempore enim, ullam voluptatum, ratione quia exercitationem veniam possimus consequuntur rerum necessitatibus saepe. Quo, facilis rem quaerat ad nulla inventore vero tempora dicta, magnam accusantium repudiandae dignissimos? Distinctio, consequatur facilis doloremque rerum debitis voluptas in quis quod repudiandae tempore consequuntur. Assumenda nobis expedita delectus enim ipsam iusto similique ex, nesciunt voluptatibus. Ipsa ullam amet qui fugiat totam accusantium vitae quia ea esse! Harum quos dolor saepe cupiditate labore? Tempore, cum.
+                </div>
+            </li>
+            <li>
+                merged syntax: overflow: x-value y-value;
+                <br><b>in the merged values the first value is of x-axis and the second value is of y-axis.</b><br>
+                example:: overflow: hidden auto; <br>now overflow-x: hidden and overflow-y: auto;
+                <br>
+                <div class="box10">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, incidunt ratione doloribus sed delectus unde laborum quidem nobis similique modi. Accusantium, optio. Eos molestias deleniti similique laborum quo eius nostrum suscipit quas sint dolorum, repellat rerum sequi nobis perspiciatis fugit dolores at, amet provident? Dolor laboriosam enim nihil quaerat esse reiciendis consequuntur labore aliquam, praesentium placeat obcaecati debitis molestiae nesciunt molestias. Provident voluptate voluptatum, et facere sequi sapiente dolor quo nostrum dignissimos, ab voluptas veniam obcaecati quaerat numquam voluptatem alias possimus explicabo quisquam consequatur saepe eveniet repellat, maiores rem illo.
+                </div>
+            </li>
+        </ol>
+    </div>
+</body>
+</html>

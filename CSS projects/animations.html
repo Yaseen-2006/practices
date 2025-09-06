@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS animation</title>
+    <style>
+        .headlist {
+            font-size: 25px;
+            text-decoration: underline;
+            text-transform: capitalize;
+        }
+
+        .container {
+            margin: 24px;
+            font-size: 1.2em;
+        }
+
+        .code {
+            font-size: 1.2em;
+           }
+        .example .div{
+            height: 220px;
+            background-color: skyblue;
+        }
+        .example .div .box{
+            height: 22px;
+            background-color: blue;
+            width: 55px;
+            animation: YaseenKaAnimation 2s ease-in-out 1s infinite reverse;
+        }
+        .example .div .box2{
+            height: 22px;
+            background-color: blue;
+            width: 55px;
+            animation: Yaseen2 2s ease-in-out 1s 2 forwards;
+        }
+        .example .div .box3{
+            height: 22px;
+            background-color: blue;
+            width: 55px;
+            animation: Yaseen2 2s ease-in-out 1s 2 backwards;
+        }
+        .example .div .box4{
+            height: 22px;
+            background-color: blue;
+            width: 55px;
+            animation: Yaseen3 2s ease-in-out 1s infinite alternate-reverse;
+        }
+        .example .div .box5{
+            height: 22px;
+            background-color: blue;
+            width: 55px;
+            animation: Yaseen2 2s ease-in-out 1s infinite backwards, YaseenKaAnimation 2s ease-in-out 1s infinite reverse;
+        }
+        @keyframes YaseenKaAnimation {
+            from{
+
+            }
+            to{
+                transform: translatex(200%) translatey(200%);
+            }
+        }
+        @keyframes Yaseen2 {
+            from{
+                background-color: blue;
+            }
+            to{
+                background-color: aqua;
+                transform: translatex(200%) translatey(200%);
+            }
+        }
+        @keyframes Yaseen3 {
+            10%{
+                transform: rotate(20deg);
+                transform: translatex(50%) translatey(50%);
+            }
+            30%{
+                transform: rotate(1turn);
+                transform: translatex(50%) translatey(50%);
+            }
+            70%{
+                background-color: blueviolet;
+                transform: translatex(100%) translatey(100%);
+            }
+            100%{
+                transform: scale(1.2);
+                transform: rotate(160deg);
+                /* transform: translatex(110%) translatex(110%); */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS animations</h1>
+    <ol>
+        <div class="headlist">@keyframes.</div>
+        <div class="container">
+            in this property we declare a variable at anywhere outside of the bracket and the there are two brackets
+            inside it.
+            <br>
+            <b>1)from { } </b>
+            <br>
+            <b>2)to { }</b>
+            <br>in this we define from where the animation will start and where it will end.
+            <br>
+            and then the variable in which that animation is stored that is called in the animation style <b>(aniamtion:
+                variable;).</b>
+            <br>
+            example::
+            <br>
+            <b>
+                <pre class="code">
+                .div{
+                    animation: YaseenKaAnimation;
+                }
+                @keyframes YaseenKaAnimation{ 
+                from{
+
+                }
+                to{
+                    transform: translatex(1000px);
+                }
+            }</pre>
+            </b>
+            <br>
+            Now the animation will not get applied to apply the animation we have to add the animation properties in the
+            div in which we wish to apply the animations.
+            <br>
+        </div>
+        <li class="headlist">animation.</li>
+        <div class="container">
+            this is the tag in the CSS which is used to call the variable in which the animations are declared.
+            <br>
+            it's example is given above in the (.div).
+        </div>
+        <li class="headlist">animation-duration</li>
+        <div class="container">
+            this is the time till which the animation will be executed. and it is represented in (s) seconds.
+            <br>
+            syntax:: <b>animation-duration: 2s;</b>
+        </div>
+        <li class="headlist"> animation-iteration-count.</li>
+        <div class="container">
+            this property is used to define how many times that particular animation will be held i.e it may be 1 time 2 times 3 times and the infinite times.
+            <br>
+            syntax:: 
+            <br>
+            <b> animation-iteration-count: 1;</b>
+            <br>
+            <b> animation-iteration-count: 2;</b>
+            <br>
+            <b> animation-iteration-count: 3;</b>
+            <br>
+            <b> animation-iteration-count: infinite;</b>
+        </div>
+        <li class="headlist">animation-timing-function.</li>
+        <div class="container">
+            this function we have seen in the transition function i.e this has the values <b>ease, ease-in, ease-out, ease-in-out, and the cubic-bazier property (which can be changed from the browser.)</b>
+            <br>
+            syntax:: <b><u>transition-timing-function: ease;</u></b>
+        </div>
+        <li class="headlist">animation-delay.</li>
+        <div class="container">
+            this property also we have seen in the transition topic this specifies the delay in the beginning of the animation after we reload the page.
+            <br>
+            syntax:: <b><u>animation-delay: 1s;</u></b>
+        </div>
+        <li class="headlist">animation-direction.</li>
+        <div class="container">
+            this specifies the direction of the animation. <b>It has several values :: reverse, alternate-reverse etc.</b>
+            <br>
+            syntax:: 
+            <br>
+            <b>animation-direction: reverse;</b>
+            <br>
+            <b>animation-direction: alternate-reverse;</b>
+        </div>
+        <li class="headlist">animation-play-state.</li>
+        <div class="container">
+            this property makes the animation paused at the place where it is at the time of applying the property. and then after that animation will continue from that place after applying the property <b>running.</b> 
+            <br>this consists two properties i.e <b>running</b> and <b>pused.</b>
+        </div>
+        <li class="headlist">animation short-hand.</li>
+        <div class="container">
+            the shorthand of the animation property is the application of all the animation properties in one property i.e <b>animation: ;</b>
+            <br>
+            in the vs code the vs code assist us to fill the all properties of animation in one tag.
+            <br>
+            <b>i.e  animation: name duration timing-function delay iteration-count direction fill-mode;</b>
+            <br>
+            syntax :: <br><b><u> animation: </u>(name) (duration) (timing-function) (delay) (iteration-count) (direction) (fill-mode);</b>
+            <br>
+            example :: 
+            <br>
+            <b> animation: YaseenKaAnimation 2s ease-in-out 1s infinite reverse;</b>
+            <br>
+            we can remove the property as we want for example we can remove the delay and fill-mode. 
+        </div>
+        <div class="example">
+            <div class="div">
+                <div class="box">
+
+                </div>
+            </div>
+        </div>
+        <li class="headlist"> animation-fill-mode.</li>
+        <div class="container">
+            by default this property have the value none if we don't apply this property to the element.
+            <br>
+            it has the values::
+            <ul>
+                <li><b>animation-fill-mode: none;</b></li>
+                <div>
+                    this property is by default applied on the animations.
+                </div>
+                <li><b>animation-fill-mode: forwards;</b></li>
+                <div>
+                    in this animation property the object on which the animation is applied that will retain the <b> final</b> keyframe value at the end of the animation it will not go back to its initial position after the animation ends.
+                </div>
+                <li><b>animation-fill-mode: backwards;</b></li>
+                <div>
+                    in this animation property the object to which the animation is applied that will retain the initial keyframe value after the animation ends.
+                    <br>
+                    <b>for more refer the video from @13:15.</b> 
+                    <br>
+                    <b><code>animation: Yaseen2 2s ease-in-out 1s 2 forwards;</code></b>
+                </div>
+                <div class="example">
+                    <div class="div">
+                        <div class="box box2">
+        
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <b><code>animation: Yaseen2 2s ease-in-out 1s 2 backwards;</code></b>
+                <div class="example">
+                    <div class="div">
+                        <div class="box box3">
+        
+                        </div>
+                    </div>
+                </div>
+            </ul>
+        </div>
+        <li class="headlist">defining the states of the animations.</li>
+        <div class="container">
+            apart from adding the (from and to) in the @keyframes we can add that what will happen after the animation is percentage wise done.
+            <br>
+            syntax::
+            <br>
+            <b><pre>@keyframes Yaseen3 {
+                10%{
+                    transform: rotate(20deg);
+                    transform: translatex(50%) translatey(50%);
+                }
+                30%{
+                    transform: rotate(1turn);
+                    transform: translatex(50%) translatey(50%);
+                }
+                70%{
+                    background-color: blueviolet;
+                    transform: translatex(100%) translatey(100%);
+                }
+                100%{
+                    transform: scale(1.2);
+                    transform: rotate(160deg);
+                }
+            }</pre></b>
+            <b><code> animation: Yaseen3 2s ease-in-out 1s infinite alternate-reverse;</code></b>
+            <div class="example">
+                <div class="div">
+                    <div class="box box4">
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+        <li class="headlist">multiple animations.</li>
+        <div class="container">
+            we can add the multiple animations in the single element to make it more attractive.
+            <br>
+            we can add the multiple animations by coma (,) separated values.
+            <br>
+            syntax:: 
+            <br>
+            <b>animation: YaseenKaAnimation 2s ease-in-out 1s infinite reverse, Yaseen2 2s ease-in-out 1s infinite reverse;</b>
+        </div>
+        <div class="example">
+            <div class="div">
+                <div class="box box5">
+
+                </div>
+            </div>
+        </div>
+    </ol>
+</body>
+
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS filters</title>
+    <style>
+        h2{
+            margin: 12px;
+            padding: 12px;
+        }
+        .ol{
+            font-size: 25px;
+        }
+        .div{
+            font-size: 0.75em;
+            text-decoration: none;
+            margin: 20px;
+        }
+        .mainlist{
+            text-decoration: underline;
+            /* filter: ; */
+        }
+        .div>p{
+            font-size: larger;
+        }
+        .img1{
+            filter: blur(10px);
+            border-radius: 50px;
+        }
+        .img2{
+            filter: brightness(10);
+            /* filter: brightness(50%); */
+            border-radius: 50px;
+            
+        }
+        .img3{
+            /* filter: contrast(10); */
+            filter: contrast(40%);
+            border-radius: 50px;
+        }
+        .img4{
+            filter: drop-shadow(10px 10px 12px red);
+            border-radius: 50px;
+        }
+        .img5{
+           filter: grayscale(50%);
+           border-radius: 50px;
+        }
+        .img6{
+            filter: hue-rotate(180deg);
+            border-radius: 50px;
+        }
+        .img7{
+            filter: opacity(50%);
+            border-radius: 50px;
+        }
+        .img8{
+            filter: saturate(5);
+            /* filter: saturate(70%); */
+            border-radius: 50px;
+        }
+        .img9{
+            filter: sepia(9);
+            border-radius: 50px;
+        }
+        .img10{
+            filter:invert(1) ;
+            border-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Filters</h1>
+    <h2>CSS Filters are applied on the images to change the contrast, brightness, saturation and many more which things we can do from the camera of the phone.</h2>
+    <ol class="ol">
+        <li class="mainlist">filter: blur(values in <b>px</b>)</li>
+        <div class="div">
+            using this property we can adjust the blurr of the image that is given.
+            <br>
+            The values entered are in <b>px</b>
+            <p>EXAMPLE::</p>
+            <img class="img1" src="https://www.piclumen.com/wp-content/uploads/2024/10/piclumen-upscale-after.webp" alt="eye" width="300">
+        </div>
+        <br>
+        <li class="mainlist">filter: brightness(value in <b>%</b> or only numbers.);</li>
+        <div class="div">
+            using this property we can increase or decrease the brightness of the image.
+            <br>
+            this value can be inserted in the <b>%</b> or in only pure numbers.
+            <br>
+            to if we enter the brightness level in the % then the brightness will increase after the 100%. <b>below the 100% brightness the brightness will start decraesing as we decrease the numbers in %.</b>
+            <p>EXAMPLE:: values are commented, filter: brightness(10); and filter: brightness(50%); we can check.</p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc9APxkj0xClmrU3PpMZglHQkx446nQPG6lA&s" alt="" class="img2" width="300">
+        </div>
+        <li class="mainlist">filter: contrast(value in <b>%</b> or only <b>numbers.</b> );</li>
+        <div class="div">
+            using this property we can increase or decrease the contrast of the image.
+            <br>
+            the value of this is entered <b>%</b> or in pure <b>numbers.</b>
+            <br>
+            if the value entered in % is below than 100% then contrast will start decreasing, and boyond 100% the contrast will increase.
+            <br>
+            <p>EXAMPLE:: values are commented, filter: filter: contrast(10); and filter: contrast(40%); we can check.</p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc9APxkj0xClmrU3PpMZglHQkx446nQPG6lA&s" alt="" class="img3">
+        </div>
+        <li class="mainlist">filter: drop-shadow(horizontal-distance vertical-diatance blurr-value shadow-color.);</li>
+        <div class="div">
+            using this property we can make the shadow of the image and adjust it's appearence.
+            <br>
+            this property contains the <b>horizontal-distance, vertical-diatance, blurr-value, shadow-color</b> these all the properties are entered in <b>px</b>.
+            <br>
+            <img width="300" src="https://static.clipdrop.co/web/apis/remove-background/output.png" alt="" class="img4">
+        </div>
+        <li class="mainlist">filter: grayscale();</li>
+        <div class="div">
+            using this property we can transform the image into the grayscale and it's grayscale can be adjusted <b>If any value is not entered the picture will become fully black and white</b>
+            <br>
+            to adjust it's grayscale the values in <b>%</b> are entered.
+            <br>
+            <p>EXAMPLE:: filter: grayscale(50%);</p>
+            <img src="https://png.pngtree.com/thumb_back/fh260/background/20230408/pngtree-powder-smoke-colorful-background-image_2164096.jpg" alt="" class="img5">
+        </div>
+        <li class="mainlist">filter: hue-rotate(Value in deg (can be adjusted from browser.));</li>
+        <div class="div">
+            using this property we can rotate the hue i.e (the color combinations we see). <b>this property's value is entered in deg.</b> THE ORIGINAL PICTURE IS DISPLAYED ABOVE.
+            <p>EXAMPLE:: filter: hue-rotate(180deg);</p>
+            <img src="https://png.pngtree.com/thumb_back/fh260/background/20230408/pngtree-powder-smoke-colorful-background-image_2164096.jpg" alt="" class="img6">
+        </div>
+        <li class="mainlist"> filter: opacity(value in <b>%</b> );</li>
+        <div class="div">
+            this property is used to reduce the opacity of the image which is mostly used to overlap the items which is mostly used with the help of the CSS grid. And tjis property is applied in <b>%.</b>
+            <br>
+            uf this property is applied then the item behind it will be visible.
+            <br>
+            <p>EXAMPLE:: filter: opacity(50%);</p>
+            <img src="https://png.pngtree.com/thumb_back/fh260/background/20230408/pngtree-powder-smoke-colorful-background-image_2164096.jpg" alt="" class="img7">
+        </div>
+        <li class="mainlist">filter: saturate(Value in <b>%</b> or in pure <b>numbers.</b> );</li>
+        <div class="div">
+            this properyty is used to adjust the saturation of the image. <b>the value is entered in % or in pure numbers.</b>
+            <br>
+            if the value entered in the % is below 100% then the saturation will reduce.
+            <br>
+            <p>EXAMPLE:: filter: saturate(5);</p>
+            <img src="https://png.pngtree.com/thumb_back/fh260/background/20230408/pngtree-powder-smoke-colorful-background-image_2164096.jpg" alt="" class="img8">
+        </div>
+        <li class="mainlist">filter: sepia(Value in <b>%</b> or pure numbers. );</li>
+        <div class="div">
+            this property is used quite similar to grayscale this property makes the pictures looks like something brownish shade. the value are entered in <b>%</b> or in pure <b>numbers.</b>
+            <br>
+            <p>EXAMPLE:: filter: sepia(9);</p>
+            <br>
+            <img src="https://png.pngtree.com/thumb_back/fh260/background/20230408/pngtree-powder-smoke-colorful-background-image_2164096.jpg" alt="" class="img9">
+        </div>
+        <li class="mainlist">filter: invert(value in <b>numbers</b> );</li>
+        <div class="div">
+            This property makes the colors of the picture swapping the values of each pixel's color channels, so that light tones appear dark and dark tones appear light.
+            <p>EXAMPLE:: filter:invert(1) ;</p>
+            <img src="https://png.pngtree.com/thumb_back/fh260/background/20230408/pngtree-powder-smoke-colorful-background-image_2164096.jpg" alt="" class="img10">
+        </div>
+    </ol>
+</body>
+</html>

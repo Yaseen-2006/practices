@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript strings</title>
+    <style>
+        ol>.list1 {
+            font-size: 30px;
+            font-weight: 600;
+        }
+
+        .container {
+            font-size: 1.25rem;
+            margin: 20px;
+        }
+
+        .sp1 {
+            font-weight: 600;
+            color: red;
+            /* text-transform: capitalize; */
+        }
+        .list2{
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Javascript strings.</h1>
+    <ol>
+        <li class="list1">strings (basics)</li>
+        <div class="container">
+            the strings are the combination of multiple charecters and are created by writing them in double quotation (
+            " " ).
+            <br>
+            also the strings can be created using the single quotation ( ' ' )
+            <BR>TO CREATE THE STRING:</BR>
+            let a = "this is a string!" <br>
+            let a = 'this is the string'
+            <br>
+            <p><span class="sp1">.length </span>
+                <br>
+                this property prints the length of the string OR we can say the number of charecters present in the
+                string.
+                <BR>EXAMPLE::</BR>
+            </p>
+        </div>
+        <li class="list1">template literals `${ }` </li>
+        <div class="container">
+            using the template literals we can use the double quotation inside the strings and also we can use the double quotation (" ") inside the single quotation (' ') if we want to print something in the double quotation in the console.
+            <br>
+            but if we want to print any string stored in a variable then the backtic (` `) is used because using this we can print any variable using <b><u>${ } inside the backtick</u></b>
+            <b><u>examples are given in the script.</u></b>
+        </div>
+        <li class="list1">Escape sequence charecters \, \n , \t , \r etc.</li>
+        <div class="container">
+            <ol>
+                <b><li>slash ( \ )</li></b>
+                this "the slash" falls into the escape sequence charecter because whwnever we need to print the "word in double quotation "in any string datatype contained in the double quotation then it is very difficult because the text editor <b>mis-understands that extra ""</b> 
+                <p>
+                    in this case this slash is used we can use it as :
+                    <br>
+                    <b>
+                    <pre>console.log("my name is \"yaseen\" and I am 18 now! " );</pre><br>
+                    <pre>console.log('my name is \'yaseen\' and I am 18 now! ');</pre><br>
+                    <pre>console.log(`my name is \`yaseen\` and i am 18 now! `);</pre><br></b>
+                </p>
+                <b><li>\n</li></b>
+                <p>
+                    this is used to make the new line in the terminal.
+                </p>
+                <b><li>\t</li></b>
+               <p>this is used to make the blank space (tab) in the terminal.</p> 
+               <b><li class="list2">\r (return carriage.)</li></b>
+               <p>
+                this property in javascript returns the carriage in the javascript.
+               </p>
+            </ol>
+        </div>
+        <li class="list1">String properties and methods.</li>
+        <div class="container">
+            <ol>
+                <li class="list2">(string).length </li>
+                <p>
+                    this property in javascript is used to print the length of the string. 
+                    (the number of charecters present in that string.)
+                </p>
+                <li class="list2">(variable).toUpperCase & (variable).LowerCase</li>
+                <div class="container">
+                    using this property in javascript we can change the charecters in the uppercase or lowercase.
+                    <br>
+                    syntax is similar to the .length property.
+                </div>
+                <li class="list2">Name slice</li>
+                <div class="container">
+                    name slice is the property in the javascript that is used to consider the certain part of the string.
+                    <p>
+                        <b>the numbering is given to the charecters of the string as follows.</b>
+                        e.g: <b><pre>name = "yaseen"</pre></b>
+                        then the numbering will start from the 0 and go further till the end.
+                        <br>
+                        y[0] a[1] s[2] e[3] e[4] n[5] 
+                        <br>
+                        total charecters : 5
+                        <br>
+                        now using this concept we can print or consider the certain part of the string by entering the number of the position of the charecters in the string and if the ending number is not given the string will continue to print.
+                    </p>
+                    <p>
+                        </BR>EXAMPLE::
+                        <BR>    
+                            <b><pre>b = a.slice(1,5);
+console.log(b);</pre></b>         
+                                output:: asee
+                                <br>
+                                this is because this numbering starts from a[1] to e[4]
+                               <br>
+                               and EXAMPLE::
+                               <b><PRE>console.log(a.slice(2));</PRE></b>
+                               <br>
+                               this prints till the end from the the position 2 position 2 is not included.
+                    </p>
+                </div>
+                <li class="list2">(variable).replace()</li>
+                <div class="container">
+                    this javascript property is used to replace the certain part of the string from the another word.
+                    <p>
+                        EXAMPLE::
+                        <b><pre>let name1 = "Mohammed yaseen bhai";
+let b = name1.replace("bhai", "siddiqi");
+console.log(b);</pre></b>
+<b>OUTPUT:: <pre>Mohammed yaseen siddiqi</pre></b>
+                    </p>
+                </div>
+                <li class="list2">(variable name).concat(variable 2 name, "concatination string.")</li>
+                <div class="container">
+                    this javascript property is used to concatinate the string 1 with string 2 with any desired extra string, that can be in this way::
+                    <br>
+                    <b>EXAMPLE::</b>
+                    <b><pre>let a = "mohammed";
+let b = " Yaseen";
+let c = a.concat(b, " siddiqi");     //this extra string will be added between two.</pre></b>
+                        <p>
+                            <B>OUTPUT::</B>
+                            <b><pre>mohammed Yaseen siddiqi</pre></b>
+                        </p>
+                </div>
+                <li class="list2">(variablename).trim()</li>
+                <div class="container">
+                    since the string is immutable, this property in javascript is used to trim the extra blank spaces present in the string containing variable. to make the string more readable.
+                    <p>
+                        EXAMPLE::
+                        <br>
+                        <b><pre>let a = "             mohammed yaseen siddiqi.        "
+console.log(a.trim());</pre></b>
+                            OUTPUT::
+                            <b><pre>mohammed yaseen siddiqi.   // extra spaces removed.</pre></b>
+                    </p>
+                </div>
+                <li class="list2">charAt(number of position of the charecter in the string.)</li>
+                <div class="container">
+                    this function in javascript is used to find the charecter which is present at the position that is entered in the brackets. 
+                    <br>
+                    <br>
+                    <span class="sp1">NOTE:: the script of the function is written in "script.js" file access that file!</span>
+                </div>
+                <li class="list2">indexOf("charecter") </li>
+                <div class="container">
+                    this javascript function will give the position at which the charecter entered in the brackets.
+                    <br>
+                    if the charectere entered in the brackets are not present in the variable then it will display (-1).
+                </div>
+                <li class="list2">MORE:</li>
+                <div class="container">
+                    there are many more properties in the browser which can be explored of javascript.
+                </div>
+            </ol>
+        </div>
+    </ol>
+
+</body>
+
+</html>

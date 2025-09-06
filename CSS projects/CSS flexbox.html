@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS flexBox</title>
+    <style>
+        ol{
+            font-size: 30px;
+        }
+        .defination{
+            font-size: 0.75em;
+            padding: 20px;
+        }
+        .box1{
+            border: 2px solid red;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+        }
+        .boxes1{
+            background-color: aqua;
+            height: 40px;
+            width: 40px;
+            border: 1px solid;
+            margin: 5px;
+        }
+        .box2{
+            border: 2px solid red;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .boxes2{
+            background-color: aqua;
+            height: 40px;
+            width: 40px;
+            border: 1px solid;
+            margin: 5px;
+        }
+        .box3{
+            border: 2px solid red;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column-reverse;
+
+        }
+        .boxes3{
+            background-color: aqua;
+            height: 40px;
+            width: 40px;
+            border: 1px solid;
+            margin: 5px;
+        }
+        .box4{
+            overflow: auto;
+            border: 2px solid red;
+            height: 450px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: center;
+
+        }
+        .boxes4{
+            background-color: aqua;
+            height: 40px;
+            width: 40px;
+            border: 1px solid;
+            margin: 5px;
+        }
+        .box5{
+            border: 2px solid red;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           flex-flow: row wrap;
+
+        }
+        .boxes5{
+            background-color: aqua;
+            height: 40px;
+            width: 40px;
+            border: 1px solid;
+            margin: 5px;
+        }
+        .box6{
+            border: 2px solid red;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           flex-flow: row wrap;
+           gap: 20px;
+
+        }
+        .box7{
+            border: 2px solid red;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           flex-flow: row wrap;
+           row-gap: 20px;
+        }
+        .box8{
+            border: 2px solid red;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           flex-flow: row wrap;
+           gap: 0px 20px;
+        }
+        .boxes6{
+            background-color: aqua;
+            height: 40px;
+            width: 40px;
+            border: 1px solid;
+        }
+        .boxes7{
+            background-color: aqua;
+            height: 40px;
+            width: 40px;
+            border: 1px solid;
+        }
+        .div{
+            display: flex;
+            gap: 20px;
+        }
+        .box9{
+            display: flex;
+            flex-wrap: wrap;
+            border: 2px solid red;
+            height: 40vh;
+
+        }
+        .boxes9 {
+            background-color: aqua;
+            height: 50px;
+            width: 50px;
+            border: 1px solid;
+            margin: 5px;
+        }
+        .order1{
+            order: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS flexBox</h1>
+    <ol>
+        <li><b>display: flex;</b>
+            <div class="defination">
+                it aligns the content in the direction of main axis. and it is given to the the container containing the contents which is to be aligned.
+                <ol type="a">
+                    <u><li>justify-content:</u> center, flex-start, flex-end, space-evenly, space-between, space-around</li>
+                    <div class="defination">
+                        all the given values can be checked in the browser.
+                        <br>
+                        it aligns the content of the given container according to the main axis. <br>we can horizontally change the position of the  content inside the container if the main axis is horizontal axis.<br>
+                        <b>the concept of main axis and cross axis is explained in the flex direction.</b> <br>
+                        example::
+                        <div class="box1">
+                            <div class="boxes1 example">1</div>
+                            <div class="boxes1 example">2</div>
+                            <div class="boxes1 example">3</div>
+                            <div class="boxes1 example">4</div>
+                            <div class="boxes1 example">5</div>
+                        </div>
+                        
+                        
+                    </div>
+                    <li><u>align-items:</u>center, flex-start, flex-end, strech, space-between, space-around</li>
+                    <div class="defination">
+                        all the given values can be checked in the browser.
+                        it aligns the content of the given container according to the cross axis. <br>we can change the position of the content inside the container according to the direction of cross axis.<br>
+                        <div class="box2">
+                            <div class="boxes2 example">1</div>
+                            <div class="boxes2 example">2</div>
+                            <div class="boxes2 example">3</div>
+                            <div class="boxes2 example">4</div>
+                            <div class="boxes2 example">5</div>
+                            <div class="boxes2 example">6</div>
+                            <div class="boxes2 example">7</div>
+                            <div class="boxes2 example">8</div>
+                            <div class="boxes2 example">9</div>
+                            <div class="boxes2 example">10</div>
+                        </div>
+                        for better understanding::
+                        <figure>
+                            <img src="https://www.delasign.com/CDN/images/Align-Content-Justify-Content.webp" alt="example" width="700"> 
+                        </figure>
+                    </div>
+                    <li><u>flex-direction:</u> row, row-reverse, column, column-reverse</li>
+                    <div class="defination">
+                        this simplifies the direction of rendering the contents inside the container and it has several values given above. 
+                        <br>
+                        for example:
+                        <br>
+                        <div class="box3">
+                            <div class="boxes3 example">1</div>
+                            <div class="boxes3 example">2</div>
+                            <div class="boxes3 example">3</div>
+                            <div class="boxes3 example">4</div>
+                            <div class="boxes3 example">5</div>
+                        </div>
+                        <figure>
+                            diagram:
+                            <br>
+                            <img src="https://byteiota.com/wp-content/uploads/2020/11/flex-direction.png" alt="example img" width="700"> 
+                        </figure>
+                    </div>
+                    <u><b><br>the flex direction changes the rendering of the main axis and the cross axis. <br>if the flex direction is rows then the main axis is horizontal and cross axis is vertical. <br>and if the flex direction is column then the main axis is vertical an the cross axis is horizontal. <br>the amin and cross axes are perpendicular to each other.</b></u>
+                    <br>
+                    example::
+                    <img src="https://samanthaming.gumlet.io/flexbox30/4-flexbox-axes.jpg.gz" alt="cross and main axes" width="700">
+                    <img src="https://miro.medium.com/v2/resize:fit:1183/1*ubDrM-3m22gLF_pZ4DCdMw.png" alt="" width="700">
+                    <li><u>flex-wrap:</u> wrap, wrap-reverse;</li>
+                    <div class="defination">
+                        it wraps the content inside the div that might overflow from the container.
+                        <br>
+                        example::
+                        <br>
+                        <div class="box4">
+                            <div class="boxes4 example">1</div>
+                            <div class="boxes4 example">2</div>
+                            <div class="boxes4 example">3</div>
+                            <div class="boxes4 example">4</div>
+                            <div class="boxes4 example">5</div>
+                            <div class="boxes4 example">6</div>
+                            <div class="boxes4 example">7</div>
+                            <div class="boxes4 example">8</div>
+                            <div class="boxes4 example">9</div>
+                            <div class="boxes4 example">10</div>
+                            <div class="boxes4 example">11</div>
+                            <div class="boxes4 example">12</div>
+                            <div class="boxes4 example">13</div>
+                            <div class="boxes4 example">14</div>
+                            <div class="boxes4 example">15</div>
+                            <div class="boxes4 example">16</div>
+                            <div class="boxes4 example">17</div>
+                            <div class="boxes4 example">18</div>
+                            <div class="boxes4 example">19</div>
+                            <div class="boxes4 example">20</div>
+                            <div class="boxes4 example">21</div>
+                            <div class="boxes4 example">22</div>
+                            <div class="boxes4 example">23</div>
+                            <div class="boxes4 example">24</div>
+                            <div class="boxes4 example">25</div>
+                            <div class="boxes4 example">26</div>
+                            <div class="boxes4 example">27</div>
+                            <div class="boxes4 example">28</div>
+                            <div class="boxes4 example">29</div>
+                            <div class="boxes4 example">30</div>
+                            <div class="boxes4 example">31</div>
+                            <div class="boxes4 example">32</div>
+                            <div class="boxes4 example">33</div>
+                            <div class="boxes4 example">34</div>
+                            <div class="boxes4 example">35</div>
+                            <div class="boxes4 example">36</div>
+                            <div class="boxes4 example">37</div>
+                            <div class="boxes4 example">38</div>
+                            <div class="boxes4 example">39</div>
+                            <div class="boxes4 example">40</div>
+                        </div>
+                    </div>
+                    <li><u>Align-Content:</u> center, flex-start, flex-end, strech, space-between, space-around.</li>
+                    <div class="defination">
+                        If we want to center the multiple lines of the content in a particular container we use this property to align all the lines in the center of that container. 
+                        <br>
+                        <b>example is given above (in the flex-wrap's example.)</b> 
+                    </div>
+                    <li><u>flex-flow : </u>row wrap</li>
+                    <div class="defination">
+                        this CSS prerty is used to define the two properties simultaniously as shown in the above syntax that the property row and wrap are declared simultaneously. 
+                        <br>example::
+                        <br>
+                        <div class="box5">
+                            <div class="boxes5 example">1</div>
+                            <div class="boxes5 example">2</div>
+                            <div class="boxes5 example">3</div>
+                            <div class="boxes5 example">4</div>
+                            <div class="boxes5 example">5</div>
+                            <div class="boxes5 example">1</div>
+                            <div class="boxes5 example">2</div>
+                            <div class="boxes5 example">3</div>
+                            <div class="boxes5 example">4</div>
+                            <div class="boxes5 example">5</div>
+                            <div class="boxes5 example">1</div>
+                            <div class="boxes5 example">2</div>
+                            <div class="boxes5 example">3</div>
+                            <div class="boxes5 example">4</div>
+                            <div class="boxes5 example">5</div>
+                            <div class="boxes5 example">1</div>
+                            <div class="boxes5 example">2</div>
+                            <div class="boxes5 example">3</div>
+                            <div class="boxes5 example">4</div>
+                            <div class="boxes5 example">5</div>
+                            <div class="boxes5 example">1</div>
+                            <div class="boxes5 example">2</div>
+                            <div class="boxes5 example">3</div>
+                            <div class="boxes5 example">4</div>
+                            <div class="boxes5 example">5</div>
+                            <div class="boxes5 example">1</div>
+                            <div class="boxes5 example">2</div>
+                            <div class="boxes5 example">3</div>
+                            <div class="boxes5 example">4</div>
+                            <div class="boxes5 example">5</div>
+                        </div>
+                    </div>
+                    <li><u>gab: value in units eg. gap: 30px;</u></li>
+                    <div class="defination">this CSS property is given to the container of the elements to give the gap between it's contents this can be seen by removing the margin between them. <br>
+                        example::
+                        <br>
+                        <div class="box6">
+                            <div class="boxes6 example">1</div>
+                            <div class="boxes6 example">2</div>
+                            <div class="boxes6 example">3</div>
+                            <div class="boxes6 example">4</div>
+                            <div class="boxes6 example">5</div>
+                            <div class="boxes6 example">6</div>
+                            <div class="boxes6 example">7</div>
+                            <div class="boxes6 example">8</div>
+                            <div class="boxes6 example">9</div>
+                            <div class="boxes6 example">10</div>
+                        </div>
+                        <br>it has rows gap and column gap in which we can give the gaps between the ther rows and column
+                        <div class="div">
+                            <div class="box7">
+                                <div class="boxes7 example">1</div>
+                                <div class="boxes7 example">2</div>
+                                <div class="boxes7 example">3</div>
+                                <div class="boxes7 example">4</div>
+                                <div class="boxes7 example">5</div>
+                                <div class="boxes7 example">6</div>
+                                <div class="boxes7 example">7</div>
+                                <div class="boxes7 example">8</div>
+                                <div class="boxes7 example">9</div>
+                                <div class="boxes7 example">10</div>
+                                <div class="boxes7 example">1</div>
+                                <div class="boxes7 example">2</div>
+                                <div class="boxes7 example">3</div>
+                                <div class="boxes7 example">4</div>
+                                <div class="boxes7 example">5</div>
+                                <div class="boxes7 example">6</div>
+                                <div class="boxes7 example">7</div>
+                                <div class="boxes7 example">8</div>
+                                <div class="boxes7 example">9</div>
+                                <div class="boxes7 example">10</div>
+                                this is rows gap
+                            </div>
+                            <div class="box8">
+                                <div class="boxes7 example">1</div>
+                                <div class="boxes7 example">2</div>
+                                <div class="boxes7 example">3</div>
+                                <div class="boxes7 example">4</div>
+                                <div class="boxes7 example">5</div>
+                                <div class="boxes7 example">6</div>
+                                <div class="boxes7 example">7</div>
+                                <div class="boxes7 example">8</div>
+                                <div class="boxes7 example">9</div>
+                                <div class="boxes7 example">10</div>
+                                <div class="boxes7 example">1</div>
+                                <div class="boxes7 example">2</div>
+                                <div class="boxes7 example">3</div>
+                                <div class="boxes7 example">4</div>
+                                <div class="boxes7 example">5</div>
+                                <div class="boxes7 example">6</div>
+                                <div class="boxes7 example">7</div>
+                                <div class="boxes7 example">8</div>
+                                <div class="boxes7 example">9</div>
+                                <div class="boxes7 example">10</div>
+                                this is columns gap
+                            </div>
+                        </div>
+                        <br>
+                        this can also be written as::
+                        <br>
+                        <b>gap: "row-gap in pixels" "column-gap in pixels"</b>
+                        <br>
+                        syntax::
+                        <b><u>gap: 20px(rows gap) 10px(column-gap); </u></b>
+                    </div>
+                </ol> 
+                <li><b>item properties in flexbox.</b></li> 
+                <div class="defination">
+                    these are the properties given to the child of the parent div.
+                </div>
+                <ol type="I">
+                    <li><u>order:</u> 1,2,3,4,5,6,7.............</li>
+                   <div class="defination">
+                    in this we can give the individual item it's orders so that in the rows direction the hoghest ordered itemwill be given the highest priority.
+                    <br>
+                    example::
+                    <br>
+                    <div class="box9">
+                        <div class="boxes9 ">1</div>
+                        <div class="boxes9 ">2</div>
+                        <div class="boxes9 ">3</div>
+                        <div class="boxes9 ">4</div>
+                        <div class="boxes9 ">5</div>
+                        <div class="boxes9 ">6</div>
+                        <div class="boxes9 ">7</div>
+                        <div class="boxes9 order1">8 order: 1</div>
+                        <div class="boxes9 ">9</div>
+                        <div class="boxes9 ">10</div>
+                        <div class="boxes9 ">1</div>
+                        <div class="boxes9 ">2</div>
+                        <div class="boxes9 ">3</div>
+                        <div class="boxes9 ">4</div>
+                        <div class="boxes9 ">5</div>
+                        <div class="boxes9 ">6</div>
+                        <div class="boxes9 ">7</div>
+                        <div class="boxes9 ">8</div>
+                        <div class="boxes9 ">9</div>
+                        <div class="boxes9 ">10</div>
+                   </div>                    
+                </div>
+                <li>flex-grow: 1, 2, 3, 4 ...........</li>
+                <div class="defination">
+                    the iten to which the property is applied that item will take the width of that much item i.e  flex-grow: 2 <br>
+                    the item will take the place of two similar items.
+                    <br>
+                    refer the video <b><u> @ 23:56.</u></b>
+                </div>
+                <li>flex-shrink:  1, 2, 3, 4 ...........</li>
+                <div class="deffination">
+                    <div class="defination">
+                        ability of the flex item to shrink if necessary.
+                        <br>it means that the item to which the flex-shrink: 2 is applied that will shrink by 2x faster than the others.<br>
+                        refer the video <b><u>@ 25:11.</u></b>
+                    </div>
+                    <li><u>align-self:</u> center, flex-start, flex-end</li>
+                    <div class="defination">
+                        this property is used to align an individual item according to it's parent.
+                        <br><b>to get this property applied the flex property of the parent should be removed.</b>
+                        <br>
+                        refer the video <b><u>@ 26:16.</u></b>
+                    </div>
+                </div>
+             </ol>              
+        </li>
+    </ol>
+    <figure>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/DWk2mndNTHY?si=iVGPnSX0tmDa_8zp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </figure>
+</body>
+</html>

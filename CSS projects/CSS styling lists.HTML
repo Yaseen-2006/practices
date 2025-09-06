@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>styling the lists in CSS</title>
+    <style>
+        body{
+            background-color: aliceblue;
+        }
+        h1{
+            margin: 35px;
+            padding: 10px;
+        }
+        .div1{
+            padding: 20px;
+            font-weight: 600;
+            font-size: large;
+        }
+        .ul1{
+            list-style: devanagari;
+        }
+        .ul2{
+            list-style: none;
+        }
+        .ul3{
+            background-color: lightblue;
+            color: black;
+            border: 2px solid red;
+            list-style-position: inside;
+        }
+        .ul4{
+            list-style-image: url("madina.png");
+        }
+        .ul5{
+            list-style-type: "😍 ";
+        }
+        .sp1{
+            font-size: x-large;
+            display: block;
+            padding: 30px;
+            margin: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>styling the lists..</h1>
+    <nav>
+        <ul>
+            <li>home</li>
+            <li>about</li>
+            <li>contact</li>
+        </nav>
+            <div class="div1">its display property is display: list-item. <br>
+            to remove the marker of the list item. <br>
+            1) <u>display: block; not a good approach. </u>
+            <br>
+            2) <u>list-style: none; (removes the marker)</u>
+            </div>
+            <div class="div1">in list style there rae many more options to change the marker style example::
+                <ul class="ul1">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <br>
+                <ul class="ul2">
+                    <li>none 1</li>
+                    <li>none 2</li>
+                    <li>none 3</li>
+                    <li>none 4</li>
+                    <li>none 5</li>
+                </ul>
+            </div>
+            <div class="div1">
+                but if we will apply the background color or any other item in the list item the marker will be remained.
+                <br>to make the marker a part of the list item we use::
+                <br><u>list-style-position: inside; </u>
+                <br>
+                example:
+                <ul>
+                    <li class="ul1 ul3">list 1</li>
+                    <li class="ul1 ul3">list 2</li>
+                    <li class="ul1 ul3">list 3</li>
+                    <li class="ul1 ul3">list 4</li>
+                </ul>
+                <br>
+                similarly we can set emoji and image at the place of the marker of the list-item  for emoji.
+                <br>
+                example:: for image  using list-style-image: url("url of the image"); for image
+                <br>
+                <ul>
+                    <li class="ul3 ul4">here is the example</li>
+                    <li class="ul3 ul4">here is the example</li>
+                </ul><br>
+                example:: for the emoji using list-style-type: "emoji";
+                <ul>
+                    <li class="ul3 ul5">here is the example</li>
+                    <li class="ul3 ul5">here is the example</li>
+                    <li class="ul3 ul5">here is the example</li>
+                    <li class="ul3 ul5">here is the example</li>
+                    <li class="ul3 ul5">here is the example</li>
+                </ul>
+                <span class="sp1">
+                    note:: we can use the "list-style: inside" and  list-style-image:url(""); at the same time.
+                    <br>example syntax::
+                    <br>
+                    list-style: inside disc; or list-style: inside url("");
+                </span>
+            </div>
+        </ul>
+        referal video.. <br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ZIofkptpXO8?si=PkVeqBF-ULTjjPG9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+</body>
+</html>

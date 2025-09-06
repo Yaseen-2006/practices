@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadows and outlines inm CSS</title>
+    <style>
+        .div1{
+            font-size: x-large;
+        }
+        .box{
+            border: 2px solid blue;
+            padding: 35px;
+            margin: 25px;
+            width: 80vw;
+
+            background-color: antiquewhite;
+            box-shadow: 15px 13px 7px 5px black;
+        }
+        .box1{
+            border: 2px solid blue;
+            padding: 35px;
+            margin: 25px;
+            width: 80vw;
+
+            background-color: antiquewhite;
+            box-shadow: inset 15px 13px 7px 5px black;
+        }
+        .p1{
+            background-color: aquamarine;
+            border: 2px solid ;
+            padding: 35px;
+            font-weight: 700;
+            text-shadow: 5px 6px 3px rgb(95, 47, 139);
+        }
+        .sp1{
+            text-decoration: underline;
+        }
+        .div2{
+            border: 2px solid black;
+            outline: 2px solid red;
+        }
+        .div3{
+            border: 2px solid black;
+            outline: 2px solid red;
+            outline-offset: 15px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>shadows and Outlines in CSS</h1>
+    </div>
+    <div class="div1">
+        <ol>
+            <li><b>shadows:</b> 
+                <ol type="a">
+                    <li><span class="sp1"> box shadow: </span>
+                        <p>used to give the shadow to a box <br> syntax:: <b>box-shadow: h-offset v-offset blur spread color inset;</b> </p>
+                        <p>example:</p>
+                        <div class="box">
+                            i am a box made by the div.
+                        </div>
+                        for making shadows inside use inset.
+                        <p>syntax:: <b>box-shadow: inset 15px 13px 7px 5px black;</b></p>
+                        <div class="box1">
+                            i am a box made by the div.
+                        </div>
+                    </li>
+                    <br>
+                    <br>
+                    <li>
+                        <span class="sp1">text shadow:</span>
+                        <p>Used to give the shadow to text</p>
+                        <p>syntax:: <b>text-shadow: h-offset v-offset blur color;</b></p>
+                        <p>example:</p>
+                        <div>
+                            <p class="p1">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates temporibus ipsum inventore maxime, pariatur tempore quisquam voluptatem praesentium rem quasi rerum eveniet nam.
+                            </p>
+                        </div>
+                    </li>
+                </ol>
+            </li>
+            <li><b>Outlines:</b>
+                <p>outline follows the border it appears outside the border and the curvature of the outline follows the the border.</p> 
+                <p>its syntax is also like the border.</p>
+                <p>syntax:: <b>outline: 2px solid red</b></p>
+                <p>EXAMPLE: </p>  
+                <div class="div2">
+                    I am a div for the outline
+                </div>
+                <br>
+                <ul>
+                    <li><span class="sp1"> outline-offset:</span>
+                        <p>gives the distance between border and outline </p>
+                        <p>syntax:: outline-offset: 15px</p>
+                        <div class="div3">
+                            I am a div for the outline
+                        </div>
+                    </li>
+                </ul>         
+            </li>
+        </ol>
+    </div>
+</body>
+</html>

@@ -1,0 +1,410 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: black;
+    font-family: "Poppins", serif;
+}
+.line{
+    height: 5px;
+    background-color: grey;
+    box-sizing: border-box;
+    border: none;
+    width: 150vw;
+}
+.main, .section1> img{
+    height: 85vh;
+    width: 100vw;
+    object-fit: cover;
+    object-position: center center; 
+}
+.section1{
+    object-fit: cover;
+    filter: brightness(30%);
+}
+.main{
+    position: relative;
+    /* transform: translatey(-100%); */
+    /* position: relative; */
+    /* top: -85vh; */
+    position: absolute;
+    top: 0;
+    color: white;
+}
+.navbar{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 22rem;
+}
+.logo{
+    width: 148px;
+}
+.select, .input-button{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.select>select{
+   background-color: #00000052;
+   color: white;
+   font-size: 18px;
+   text-transform: capitalize;
+   border-radius: 5px;
+   padding: 5px 8px;
+}
+.button1>button{
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 7px 15px;
+    border: none;
+    font-weight: 500;
+    font-size: 15px;
+    transition: background-color ease-in-out 0.2s;
+}
+.input-button>.button2:hover,.button1>button:hover{
+    background-color: rgb(185, 11, 11);
+}
+.maintext{
+    font-size: 44px;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 150px;
+}
+.subtext1, .subtext2{
+    text-align: center;
+    padding: 10px;
+}
+.input-button>.email{
+    color: antiquewhite;
+    background-color: #00000052;  
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 10px ;
+    width: 450px;
+    height: 25px;
+}
+.input-button{
+    justify-content: center;
+    align-items: center;
+}
+.input-button>.button2{
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 100;
+    font-size: 25px;
+    padding: 10px 15px;
+    margin: 15px;
+    transition: background-color ease-in-out 0.2s;
+}
+.email::placeholder{
+    color: rgb(159, 163, 165);
+    font-weight: 600;
+    font-size: 15px;
+}
+.section2{
+    height: 60vh;
+    background-color: black;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.section2>.text{
+    width: 30vw;
+}
+.visuals{
+    position: relative;
+}
+.text{
+    color: white;
+    /* width: 22%; */
+}
+.section2>.text>.text1{
+    font-size: 44px;
+    font-weight: 700;
+}
+.section2>.text>.text2{
+    font-size: 20px;
+    
+}
+.video1{
+    position: absolute;
+    right: 60px;
+    top: 70px;
+    z-index: 0;
+}
+.image1{
+    position: relative;
+    z-index: 2;
+}
+.section3{
+    height: 60vh;
+    background-color: black;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    /* position: relative; */
+}
+.section3>.text{
+    width: 30vw;
+}
+.section3>.text>.text1{
+    font-size: 44px;
+    font-weight: 700;
+}
+.section3>.text>.text2{
+    font-size: 20px;
+    /* font-weight: 700; */
+}
+.section4{
+    height: 60vh;
+    background-color: black;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    position: relative;
+}
+.section4>.text{
+    width: 30vw;
+}
+.section4>.text>.text1{
+    font-size: 44px;
+    font-weight: 700;
+}
+.section4>.text>.text2{
+    font-size: 20px;
+    /* font-weight: 700; */
+}
+.video2{
+    position: absolute;
+    right: 60px;
+    top: 70px;
+    z-index: 0;
+}
+.image4{
+    position: relative;
+    z-index: 2;
+}
+.section5{
+    height: 60vh;
+    background-color: black;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    /* position: relative; */
+}
+.section5>.text{
+    width: 30vw;
+    margin-left: 10px;
+}
+.section5>.text>.text1{
+    font-size: 44px;
+    font-weight: 700;
+}
+.section5>.text>.text2{
+    font-size: 20px;
+    /* font-weight: 700; */
+}
+.section6{
+    height: auto;
+    background-color: black;
+    color: white;
+    margin-top: 5px;
+
+}
+.section6>.text-faq{
+    font-size: 44px;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+.questions{
+    padding-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.questions>.faq-common{
+    background-color: rgb(45, 45, 45);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60vw;
+    padding: 10px 25px;
+    margin: 5px;
+    transition: background-color 0.5s cubic-bezier(0.32,0.94,0.6,1);
+}
+.questions>.faq-common:hover{
+    background-color: rgb(65, 65, 65);
+    cursor: pointer;
+    /* transition: background-color 0.5s cubic-bezier(0.32,0.94,0.6,1); */
+}
+.questions>.faq-common>.sign{
+    font-size: 40px;
+    font-weight: 200;
+}
+.get-started{
+    padding-bottom: 50px;
+}
+/* .section2, .section3, .section4, .section5, .section6, .section7{
+    width: auto;
+} */
+.section7{
+    height: auto;
+    background-color: black;
+    margin-top: 5px;
+    color: grey
+}
+.lists-grid{
+    display: flex;
+    justify-content: center;
+}
+.ex{
+    width: 60vw;
+}
+.number{
+    padding-top: 4%;
+    display: flex;
+    justify-content: center;
+}
+.lists-grid>ul{
+    list-style-type: none;
+}
+.lists-grid>ul>li>a{
+    color: grey;
+    text-decoration-color: grey;
+    text-decoration: underline;
+}
+.select2{
+        width: 60vw;
+}
+.center{
+    display: flex;    
+    justify-content: center;
+    
+}
+.select2>select{
+    background-color: #00000052;
+    color: white;
+    font-size: 18px;
+    text-transform: capitalize;
+    border-radius: 5px;
+    padding: 5px 8px;
+ }
+ .end{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 100px;
+ }
+.end>p{
+    width: 60vw;
+}
+
+.sp1:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+@media only screen and (max-width: 1300px){
+    body, html{
+        margin: 0px;
+        padding: 0px;
+        width: 100vw;
+        box-sizing: border-box;
+    }
+    .navbar{
+        padding: 20px 10px;
+    }
+    .section1, .section2, .section3, .section4, .section5, .section6, .section7{
+        height: auto;
+        width: 100vw;
+        box-sizing: border-box;
+    }
+    
+
+    .section1>img{
+        height: 110vh;
+        width: 100vw;
+        box-sizing: border-box;
+    }
+}
+
+@media only screen and (min-width: 1300px){
+    .lists-grid>ul{
+        padding: 45px 0px;
+        display: grid;
+        list-style-type: none;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        width: 60vw;  
+        gap: 5px;  
+        text-transform: capitalize;
+    }
+}
+@media only screen and (max-width: 1300px){
+    .lists-grid>ul{
+        padding: 45px 0px;
+        display: grid;
+        list-style-type: none;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 60vw;  
+        gap: 5px;  
+        text-transform: capitalize;
+    }
+}
+@media only screen and (max-width: 750px){
+    .lists-grid>ul{
+        padding: 45px 0px;
+        display: grid;
+        list-style-type: none;
+        grid-template-columns: 1fr 1fr;
+        width: 60vw;  
+        gap: 5px;  
+        text-transform: capitalize;
+    }
+}
+@media only screen and (max-width: 450px){
+    .lists-grid>ul{
+        padding: 45px 0px;
+        display: grid;
+        list-style-type: none;
+        grid-template-columns: 1fr;
+        width: 60vw;  
+        gap: 5px;  
+        text-transform: capitalize;
+    }
+}
+
+/* @media only screen and (max-height: 560px) and {
+    .section1, .section2, .section3, .section4, .section5{
+        height: auto;
+        width: 100vw;
+    }
+    .section1>img{
+        height: 110vh;
+        width: 100vw;
+    }
+} */

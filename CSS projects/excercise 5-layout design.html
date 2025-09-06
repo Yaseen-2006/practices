@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout design</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        header{
+            background-color: rgb(224, 76, 205);
+            padding: 15px;
+            color: white;
+            position: sticky;
+            top: 0;
+        }
+        ul li{
+            list-style: none;
+            display: inline;
+            margin: 15px;
+            padding: 10px 8px;
+        }
+        .container{
+            background-color: green;
+            margin: 10px 20px;
+            /* height: 344px; */
+            text-align: center;
+        }
+        .box1{
+            width: 544px;
+             height: 544px;
+             display: inline-block;
+             background-color: peachpuff;
+             margin: 25px;
+        }
+        .box2{
+            width: 544px;
+            height: 544px;
+            display: inline-block;
+            background-color: blue;
+            margin: 25px;
+        }
+
+        .content{
+            color: white;
+            border: 2px solid white;
+            margin: 60px 280px;
+            font-size: 50px;
+            padding: 40px;
+            border-radius: 50px ;
+        }
+        footer{
+            height: 64px;
+            width: 100%;
+            background-color: rgb(245, 214, 245);
+        }
+        .logo{
+            width: 36px;
+            height: 36px;
+            background-color: orange;
+            border-radius: 50px;
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About - Us</li>
+                <li>help</li>
+                <li>Contact Us</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="box1"></div>
+            <div class="box2"></div>
+        </div>
+        <div class="content">
+            Welcome to Sigma Web development Express.
+        </div>
+    </main>
+
+    <div class="logo"></div>
+    <footer>
+        <div class="box"></div>
+    </footer>
+</body>
+</html>
